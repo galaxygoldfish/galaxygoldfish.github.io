@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
 </head>
 <link href="output.css" rel="stylesheet">
 <body class="bg-[url('art/background.svg')] bg-cover bg-center min-h-screen flex flex-col">
     <!--Landing-->
-    <div class="w-full max-w-8xl mx-auto flex flex-col min-h-screen justify-between px-15 py-10">
-        <nav>
-            <ul class="flex flex-row justify-center md:justify-start gap-x-6 md:gap-x-10">
-                <li><a href="#" class="inter-menu">ABOUT</a></li>
-                <li><a href="#" class="inter-menu">EXPERIENCE</a></li>
-                <li><a href="#" class="inter-menu">PORTFOLIO</a></li>
-                <li><a href="#" class="inter-menu">WRITING</a></li>
-                <li><a href="#" class="inter-menu">CONTACT</a></li>
-            </ul>
-        </nav>
+    <nav id="navbar" class="flex flex-row w-full h-auto justify-between fixed pt-10 transition-all duration-300">
+        <ul class="flex flex-row justify-center md:justify-start gap-x-6 md:gap-x-10 px-[4rem]">
+            <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">ABOUT</a></li>
+            <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">EXPERIENCE</a></li>
+            <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">PORTFOLIO</a></li>
+            <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">WRITING</a></li>
+            <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">RESUME</a></li>
+        </ul>
+        <div class="hover:bg-black group border-black border-2 rounded-md mr-15 transition-all duration-200 hover:scale-[1.02]">
+            <a href="#" class="inter-menu m-6 group-hover:invert">CONTACT</a>
+        </div>
+    </nav>
+    <div class="w-full max-w-8xl mx-auto flex flex-col min-h-screen justify-end px-15 py-10">
         <div class="flex flex-col md:flex-row items-center justify-between w-full mx-auto pb-10">
             <div class="flex flex-col items-start text-center md:text-left">
                 <h1 class="neue-medium leading-none">SEBASTIAN <br> HRISCU</h1>
@@ -123,54 +127,54 @@
         <h2 class="neue-regular">Portfolio</h2>
         <div class="flex flex-row justify-start mt-10">
             <!--GROOVECHART-->
-            <a href="">
-                <div class="flex flex-col border-2 bg-white border-black rounded-md w-xs">
+            <a href="" class="">
+                <div class="flex flex-col border-2 bg-white border-black rounded-md w-xs hover:bg-black hover:scale-[1.01] transition-transform group transition-duration-500 ease-in-out">
                     <img src="art/groovechart.png" class="rounded-md">
                     <div class="w-full bg-black h-0.5"></div>
-                    <div class="ml-4 flex flex-col">
+                    <div class="ml-4 flex flex-col group-hover:invert">
                         <a class="queering-portfolio-card">GROOVECHART</a>
                         <a class="inter-body">Feb 2024 - Present</a>
                         <a class="inter-body">Native Android/iOS App</a>
                     </div>
-                    <div class="flex flex-row w-xs justify-end mt-9">
+                    <div class="flex flex-row w-xs justify-end mt-9 group-hover:invert">
                         <img src="icon/arrow-down-end.svg" class="size-[24px] mr-4 mb-4">
                     </div>
                 </div>
             </a>
             <!--WAVESLIDER-->
             <a href="">
-                <div class="flex flex-col border-2 bg-white border-black rounded-md ml-6 w-xs">
+                <div class="flex flex-col border-2 bg-white border-black rounded-md ml-6 w-xs hover:bg-black hover:scale-[1.01] transition-transform group transition-duration-500 ease-in-out">
                     <img src="art/waveslider.png" class="rounded-md">
                     <div class="w-full bg-black h-0.5"></div>
-                    <div class="ml-4 flex flex-col">
+                    <div class="ml-4 flex flex-col group-hover:invert">
                         <a class="jb-mono-portfolio-card mt-3">WaveSlider</a>
                         <a class="inter-body mt-3">Nov 2023 - Oct 2024</a>
                         <a class="inter-body">Native Android Library</a>
                     </div>
-                    <div class="flex flex-row w-xs justify-end mt-10">
+                    <div class="flex flex-row w-xs justify-end mt-10 group-hover:invert">
                         <img src="icon/arrow-down-end.svg" class="size-[24px] mr-4 mb-4">
                     </div>
                 </div>
             </a>
             <!--SCOUTING-->
             <a href="">
-                <div class="flex flex-col border-2 bg-white border-black rounded-md ml-6 w-xs">
+                <div class="flex flex-col border-2 bg-white border-black rounded-md ml-6 w-xs hover:bg-black hover:scale-[1.01] transition-transform group transition-duration-500 ease-in-out">
                     <img src="art/scouting.png" class="rounded-md">
                     <div class="w-full bg-black h-0.5"></div>
-                    <div class="ml-4 flex flex-col">
+                    <div class="ml-4 flex flex-col group-hover:invert">
                         <a class="inter-portfolio-card mt-3">Scouting App</a>
                         <a class="inter-body mt-3">Feb 2022 - Apr 2023</a>
                         <a class="inter-body">Android (tablet) App</a>
                     </div>
-                    <div class="flex flex-row w-xs justify-end mt-10">
+                    <div class="flex flex-row w-xs justify-end mt-10 group-hover:invert">
                         <img src="icon/arrow-down-end.svg" class="size-[24px] mr-4 mb-4">
                     </div>
                 </div>
             </a>
             <!--OVERFLOW CARD-->
             <a href="">
-                <div class="flex flex-col border-2 border-black rounded-md h-full ml-6 justify-center">
-                    <img src="icon/bar-overflow.svg" class="size-[24px] mx-7">
+                <div class="flex flex-col border-2 border-black rounded-md h-full ml-6 justify-center hover:bg-black hover:scale-[1.01] transition-transform group transition-duration-500 ease-in-out">
+                    <img src="icon/bar-overflow.svg" class="size-[24px] mx-7 group-hover:invert">
                 </div>
             </a>
         </div>
