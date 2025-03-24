@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@font-face {
+    font-family: "neue-medium";
+    src: url(font/neuehaasgrotesk-medium.otf);
+}
+
+@font-face {
+    font-family: "neue-regular";
+    src: url(font/neuehaasgrotesk-regular.otf);
+}
+
+@font-face {
+    font-family: "queering";
+    src: url(font/queering.otf);
+}
+
+.inter-menu {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    letter-spacing: -0.03em;
+}
+
+.inter-body {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    line-height: 101%;
+}
+
+.inter-chip {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: -0.03em;
+}
+
+.neue-regular {
+    font-family: "neue-regular";
+    font-size: 28px;
+    line-height: 95%;
+    letter-spacing: -0.01em;
+}
+
+.neue-medium {
+    font-family: "neue-medium";
+    font-size: 100px;
+    line-height: 95%;
+    letter-spacing: -0.04em;
+}
+
+.neue-card-label {
+    font-family: "neue-medium";
+    font-size: 23px;
+    line-height: 95%;
+    letter-spacing: -0.01em;
+}
+
+.inter-card-label-subtitle {
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    color: #000000b5;
+}
+
+.inter-portfolio-card {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    font-size: 30px;
+}
+
+.queering-portfolio-card {
+    font-family: "queering";
+    font-size: 50px;
+}
+
+.jb-mono-portfolio-card {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+}
