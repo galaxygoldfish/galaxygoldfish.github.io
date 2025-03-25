@@ -33,7 +33,7 @@
 }
 
 .neue-regular {
-    font-family: "neue-regular";
+    font-family: "neue-regular", serif;
     font-size: 28px;
     line-height: 95%;
     letter-spacing: -0.01em;
