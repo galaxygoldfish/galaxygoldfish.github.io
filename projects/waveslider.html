@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <script src="../script.js"></script>
+    <link href="../output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#FBF8FD] bg-center min-h-screen flex flex-col">
+   <nav id="navbar" class="flex flex-col  md:flex-row w-full h-auto justify-between fixed pt-10 transition-all duration-500 ease-in-out">
+        <div class="flex flex-col md:flex-row w-full md:justify-between md:w-full transition-all duration-400">
+            <div class="flex flex-row w-full md:w-auto justify-between md:order-last">
+                <button id="menu-toggle" class="ml-10 md:hidden">
+                    <img src="../icon/bar-overflow.svg" class="pt-1 size-[24px]">
+                </button>            
+                <script>
+                    // Expanding menu (on small device sizes) on button click
+                    document.getElementById("menu-toggle").addEventListener("click", function() {
+                        const menu = document.getElementById("menu");
+                        if (menu.classList.contains("max-h-0")) {
+                            menu.classList.remove("max-h-0", "opacity-0", "invisible");
+                            menu.classList.add("max-h-[500px]", "opacity-100", "visible");
+                            navbar.classList.add("backdrop-blur-lg", "bg-white/30", "shadow-sm", "pb-7", "pt-7");
+                        } else {
+                            menu.classList.remove("max-h-[500px]", "opacity-100", "visible");
+                            menu.classList.add("max-h-0", "opacity-0", "invisible");
+                        }
+                    });
+                </script>
+                <div class="bg-black group hover:bg-[#00000000] border-black border-2 rounded-md mr-10 md:mr-15 transition-all duration-200 hover:scale-[1.02]">
+                    <a href="#" class="inter-menu m-6 text-white group-hover:invert">CONTACT</a>
+                </div>
+            </div>
+            <ul class="hidden order-first md:flex flex-row justify-start gap-x-6 md:gap-x-10 px-[4rem]">
+                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html" class="inter-menu">HOME</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html#about" class="inter-menu">ABOUT</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html#experience" class="inter-menu">EXPERIENCE</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html#portfolio" class="inter-menu">PORTFOLIO</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html#writing" class="inter-menu">WRITING</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">RESUME</a></li>
+            </ul>
+            <ul id="menu" class="max-h-0 opacity-0 invisible flex-col justify-center ml-10 transition-all duration-400 ease-in-out">
+                <li class="hover:scale-[1.03] transition-all duration-200 mt-10"><a href="../index.html" class="inter-menu">HOME</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../index.html#about" class="inter-menu">ABOUT</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../index.html#experience" class="inter-menu">EXPERIENCE</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../index.html#portfolio" class="inter-menu">PORTFOLIO</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../index.html#writing" class="inter-menu">WRITING</a></li>
+                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="#" class="inter-menu">RESUME</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="w-full md:max-w-8xl mx-auto flex flex-col min-h-screen justify-end px-15 py-10">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full mx-auto pb-10">
+            <div class="w-full flex flex-col items-center md:items-start text-center md:text-left order-last md:order-first">
+                <img src="../art/waveslider-header.svg" class="mb-10 md:mb-20">
+                <h1 class="inter-waveslider-display leading-none text-6xl md:text-8xl mb-7 md:mb-12">WaveSlider</h1>
+                <div class="w-full flex flex-col md:flex-row md:justify-between">
+                    <p class="inter-body pt-3">May 2023 - October 2024<br>Android (Jetpack Compose) Library</p>
+                    <a href="https://github.com/galaxygoldfish/waveslider" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center bg-black rounded-md mt-10 md:mt-0 transition-all hover:bg-[#00000000] hover:border-2 group justify-center">
+                        <img src="../icon/github-mark.svg" class="ml-5 size-[24px] group-hover:invert">
+                        <span class="text-white m-5 inter-body group-hover:invert">View source on GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div class="w-full flex flex-col px-15 items-center">
+        <div class="max-w-5/6 md:max-w-6xl place-self-center mt-20 md:mt-32">
+            <p class="inter-body text-center md:text-start" style="line-height: 130%;">My inspiration for this project came with the introduction of Material Design 3 and Android 12, which was a major visual overhaul for Google and Android interfaces. This new design language brought the concept of Dynamic Color, new Material guidelines and a more consistent and expressive experience. While all of these new changes were very exciting, the one that caught my eyes the most was the new media player notification on Android, which featured an animated progress bar that moved like a wave.
+                <br></br>
+                Being an Android developer and Material Design fan, I set out to search for this new wavy progress bar, assuming that it would be available in the new release of the Android SDK, but I couldn’t find it anywhere (and no third party libraries like Google’s Accompanist contained a way to get this new component). Having just learned Jetpack Compose, I decided to just take the leap and attempt to do it myself and figure out a way to make this mysterious component possible to use.
+                <br></br>
+                WaveSlider is an open-source native Android library that contains the Jetpack Compose component of the animated wavy slider featured starting in Android 12, and is customizable, lightweight and straightforward to use.
+            </p>
+            <div class="flex flex-col md:flex-row justify-between mt-16">
+                <div>
+                    <p class="inter-waveslider-header text-2xl text-center md:text-start">Library documentation</p>
+                    <p class="inter-body mt-7 text-center md:text-start" style="line-height: 130%;">I wrote and published documentation for WaveSlider on the GitHub Wiki for my project’s repository, outlining what everything means, a quick start guide, and all client-facing customizations and ways to implement WaveSlider. 
+                        <br></br>
+                        Since the library is published on JitPack, the documentation also includes instructions on how to set that up in Android Studio and add the dependency to a project.
+                        <br></br>
+                        The main goal was to simplify the process as much as possible with various code samples and visuals, so that using the library is as seamless as possible for developers.
+                        <br><br>
+                        <a class="inter-body" style="text-decoration: underline; font-feature-settings: 'liga' 1, 'calt' 1;" href="https://github.com/galaxygoldfish/waveslider/wiki/Documentation">View the documentation here -></a>
+                    </p>
+                </div>
+                <img src="../art/waveslider-documentation.png" class="pt-10 md:pt-1 md:w-1/3 md:pl-10 object-contain">
+            </div>
+            <p class="inter-waveslider-header text-2xl mt-16 text-center md:text-start">Collaborative & open source</p>
+            <p class="inter-body mt-7 text-center md:text-start" style="line-height: 130%;">WaveSlider is fully open source and created collaboratively on GitHub. As of now, I’ve worked with 4 collaborators to merge multiple pull requests and solve issues found by library users. 
+                <br></br>
+                It’s really exciting to see this library being used (at least until Material adds an official implementation of this) in many projects, as of now the repository has 100+ stars and 10+ forks, and has been shared among many developers on sites like Stack Overflow & X. 
+            </p>
+            <div class="flex flex-col md:flex-row justify-between mt-16">
+               <div>
+                    <p class="inter-waveslider-header text-2xl text-center md:text-start">Demo application</p>
+                    <p class="inter-body mt-7 text-center md:text-start" style="line-height: 130%;">In addition to the library, I’ve also created a demo application that allows both prospective and current users to test out the core functionality of the library. In the interface, it has toggles that can customize some of the core parameters that the component has, and it also shows off what a sample implementation of the slider would look like in an app that adheres to Material 3 guidelines using Dynamic Color.
+                        <br></br>
+                        For current users of the library, a look into the demo application source code shows best practices and a real-world implementation of the library, which can help with troubleshooting regarding how to initially add the WaveSlider library, how to use the component, and more.
+                    </p> 
+                </div> 
+                <img src="../art/waveslider-demoapp.png" class="md:w-1/5 md:pl-10 pt-10 md:pt-0">
+            </div>
+            <p class="inter-waveslider-header text-2xl mt-16 text-center md:text-start">Project takeaways</p>
+            <p class="inter-body mt-7 text-center md:text-start mb-32" style="line-height: 130%;">
+                Although this library is fairly straightforward (having only a single component), it does have a lot of moving parts and was a valuable experience for me, broadening my perspective and getting exposure to different developer tools.
+                <br></br>
+                Since WaveSlider is a library, designing and implementing it was a little bit of a different process than projects that I'm used to (mobile apps). When I'm building apps, I keep users in mind in how I design the interface, and what features I add to the product, however in this project, I had to shift my perspective to still have users in mind, but also keep the developer experience in mind. It was a good exercise in code quality, since it won't just be me who goes back and uses the code from this project, but it could be potentially hundrdeds of other developers who are using this in their product, or who are contribtuing to the project. 
+                <br></br>
+                It also brought me to learn how to publish a library on JitPack, and best practices for release cycles (when to release, what to include in each release, how to publish and name different versions, etc.)
+            </p>
+        </div>
+    </div>
+</body>

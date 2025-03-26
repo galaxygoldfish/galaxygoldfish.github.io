@@ -68,14 +68,21 @@
     font-size: 30px;
 }
 
-.queering-portfolio-card {
-    font-family: "queering";
-    font-size: 50px;
-}
-
 .jb-mono-portfolio-card {
     font-family: "JetBrains Mono";
     font-size: 30px;
     font-weight: 700;
     letter-spacing: -0.06em;
+}
+
+.inter-waveslider-display {
+    font-family: Inter;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+}
+
+.inter-waveslider-header {
+    font-family: Inter;
+    font-weight: 500;
+    letter-spacing: -0.02em;
 }
