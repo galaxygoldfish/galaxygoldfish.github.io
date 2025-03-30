@@ -10,6 +10,11 @@
     src: url(font/neuehaasgrotesk-regular.otf);
 }
 
+@font-face {
+    font-family: "queering";
+    src: url(font/queering.otf);
+}
+
 .inter-menu {
     font-family: Inter;
     font-weight: 500;
@@ -85,4 +90,9 @@
     font-family: Inter;
     font-weight: 500;
     letter-spacing: -0.02em;
+}
+
+.queering-groovechart-display {
+    font-family: "queering";
+    font-size: 150px;
 }
