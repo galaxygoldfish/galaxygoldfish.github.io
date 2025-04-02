@@ -79,9 +79,44 @@
     </div>
     </div class="w-full flex flex-col px-15 items-center">
         <div class="max-w-5/6 md:max-w-6xl place-self-center mt-20 md:mt-32">
-            <p class="inter-body text-center md:text-start p-0" style="line-height: 130%;">
-                Groovechart is a companion app for Spotify, bringing extended functionality and 
+            <p class="inter-body text-center md:text-start p-0" style="line-height: 140%;">
+                Groovechart is a companion mobile app for Spotify, allowing users to access stats about their music taste, see what friends are listening to, and expand their taste through generated playlists. I leveraged the Spotify Web API and Buddylist for the backend of this project, and used the Kotlin Multiplatform Mobile (KMM) framework to build the iOS/Android apps.
             </p>
+            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">GENERATED PLAYLIST WALKTHROUGH</p>
+            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
+                Being one of the central features of the product, users are able to get generated playlists using the recommendation endpoint (from Spotify Web API). While Spotify already provides various playlists containing songs that users might like (based off of their listening history), I wanted to allow users to fine tune the exact mood of their discovery playlists and take advantage of all the parameters available in the recommendation endpoint. 
+            </p>
+            <img src="../art/groovechart-generatedwalk.svg" class="w-full rounded-md border-2 mt-10">
+            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
+                Above is a storyboard of the process that a user would go through to use the playlist generation / recommendation feature of the app. The app offers a few pre-configured themes to choose from for easy, one tap playlist creation, but in the above process, the user selects the "Completely custom" option which allows them to have full control over the genres, mood and length. 
+                My main focus in determining how to structure the customization interface was to communicate the intended course of action to users through layout, using typography hierarchy, large actionable blocks, dashed vs filled outlines and light animation upon interaction. I've also implemented my <a style="text-decoration: underline;" href="waveslider.html">WaveSlider</a> library in the "Adjust the mood" page to give a smooth animation to the sliders upon drag.
+            </p>
+            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">BUILDING A PRODUCT IDENTITY</p>
+            <img src="../art/groovehcart-designsystem.svg" class="w-full rounded-md border-2 mt-7">
+            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
+                In the final iteration of the app, I wanted to create a design system that was consistent and bold, but not too overcrowded to maintain clarity and ease of use. In the design system, I used a monochromatic color palette, light shape outlining and moderate corner sizing to embrace a content-centric interface where artist images and cover art take the main stage in full color. For display typography, I elected to use the bold and expressive Queering font which complements the dense yet clear main interface, and Inter elsewhere as a clean sans-serif that is easy to read and doesn’t take the attention away from the main content.
+            </p>
+            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
+                This was also a really good exercise in using design tokens - in this project I draw heavily on the Material 3 system but use custom branding (and opting out of dynamic color) and typography. Using these tokens gave me some good practice in asset & style libraries in Figma, which translate really nicely to a faster implementation for both native apps. Since KMM allows for a central "logic" module while the UI is still implemented natively, I was able to plug-and-play the styles and components that I created in Figma in the SwiftUI and Jetpack Compose counterparts. This gave a lot more structure to the steps I took to implement the project, and allowed more time to focus on bug fixes/central API logic/performance optimization.
+            </p> 
+            <img src="../art/groovechart-components.svg" class="w-full rounded-md border-2 mt-10">
+            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
+                Shown above are some of the UI components that I created in my Figma project library, all of which apply the design tokens created as part of my custom Groovechart design system (text styles, color, shape, icon components, etc.)
+            </p>
+            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">ITERATIVE DESIGN PROCESS</p>
+            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
+                Over the course of this project's design phase, I went through three main design iterations, starting with one based off of <a>Material 3 theming</a>, then proceeding to create a custom design system, and in the final iteration, a refined version of my custom system that focuses on visual communication, consistency, and simplicity. A few main highlights include:
+                <ul class="list-disc ml-5 mt-5">
+                    <li class="inter-body mt-3">Keeping the idea of a bold design as the main focus</li>
+                    <li class="inter-body mt-3">Reducing visual clutter to highlight the intended course of action</li>
+                    <li class="inter-body mt-3">Moving to a primarily monochromatic UI, with focused content in full color</li>
+                    <li class="inter-body mt-3">Creating a dense while still readable interface</li>
+                </ul>
+            </p>
+            <img src="../art/groovechart-iterative.svg" class="w-full rounded-md border-2 mt-10">
+            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">DEVELOPMENT & FRAMEWORK</p>
+            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">PROJECT TAKEAWAYS</p>
+            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">FUTURE: WIDGET & WEARABLE</p>
         </div>
-    </div>
+    </div>z
 </body>
