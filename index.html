@@ -17,7 +17,7 @@
         <div class="flex-row relative ml-2">
             <div class="absolute top-0 left-0 h-full flex">
                 <div class="w-[1.5px] bg-black mt-1 mb-1"></div>
-                <img id="indicator" src="icon/scroll-indicator.svg" class="relative w-6 h-6 -left-[13px] transition-all duration-200" />
+                <img id="indicator" src="icon/scroll-indicator.svg" class="relative w-6 h-6 -left-[13px] transition-all duration-150" />
             </div>
             <nav class="pl-4 space-y-2 text-sm relative z-10" id="sidebar">
                 <a href="#overview" class="block body text-[#999999] text-[16px]" data-section="overview">Overview</a>
@@ -25,13 +25,13 @@
                 <a href="#skills" class="block body text-[#999999] text-[16px]" data-section="skills">Skills</a>
                 <a href="#experience" class="block body text-[#999999] text-[16px]" data-section="experience">Experience</a>
                 <a href="#education" class="block body text-[#999999] text-[16px]" data-section="education">Education</a>
+                <a href="#recommendations" class="block body text-[#999999] text-[16px]" data-section="recommendations">Testimonials</a>
                 <a href="#certifications" class="block body text-[#999999] text-[16px]" data-section="certifications">Certifications</a>
-                <a href="#testimonials" class="block body text-[#999999] text-[16px]" data-section="testimonials">Testimonials</a>
                 <a href="#contact" class="block body text-[#999999] text-[16px]" data-section="contact">Contact</a>
                 <a href="#resume" class="block body text-[#999999] text-[16px]" data-section="resume">Resume</a>
             </nav>
         </div>
-        <div class="fixed bottom-4 ml-4 mb-5 flex space-x-4">
+        <div class="fixed bottom-4 ml-4 mb-8 flex space-x-4">
             <a href="#" aria-label="Dribbble" target="_blank">
                 <img src="icon/dribble-icon.svg" />
             </a>
@@ -52,7 +52,7 @@
   <div class="ml-60 mr-60 w-full flex place-content-center">
   <main class="flex-1 overflow-y-auto max-w-3/4">
     <section id="overview" class="flex flex-row gap-x-10 mt-20">
-        <img src="art/me.png" class="aspect-square w-30 h-40 object-cover rounded-sm"/>
+        <img src="art/me.png" class="aspect-square w-30 h-40 object-cover rounded-sm "/>
         <div class="">
             <p class="title text-2xl">Student, designer, developer & researcher</p>
             <p class="body mt-3">Hi! My name is Sebastian and I’m an undergraduate studying <u>Computer Science</u> and <br>
@@ -65,10 +65,10 @@
         <p class="title text-2xl">Projects</p>
         <div class="relative mt-5">
             <div class="flex flex-row gap-x-3 overflow-x-auto scrollbar-hide pr-10">
-            <img src="art/groovechart-card.svg" />
-            <img src="art/ubiquifi-card.svg" />
-            <img src="art/pineapple-card.svg" />
-            <img src="art/waveslider-card.svg" />
+            <img src="art/groovechart-card.svg" class="shadow-image aspect-auto h-80" />
+            <img src="art/ubiquifi-card.svg" class="shadow-image aspect-auto h-80" />
+            <img src="art/pineapple-card.svg" class="shadow-image aspect-auto h-80" />
+            <img src="art/waveslider-card.svg" class="shadow-image aspect-auto h-80" />
             </div>
             <div class="pointer-events-none absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent"></div>
         </div>
@@ -88,98 +88,254 @@
         <p class="title text-2xl">Academic</p>
         <div>
             <div class="flex flex-row mt-5">
-                <img src="art/uw-gs.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <img src="art/uw-gs.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
                 <div class="flex flex-col ml-4">
-                    <p class="title text-lg">Research Assistant</p>
-                    <p class="subtitle-italic text-sm mt-0.5">University of Washington Department of Genome Sciences</p>
-                    <p class="subtitle text-sm">June 2025 - Present</p>
+                    <p class="title text-md">Research Assistant</p>
+                    <p class="subtitle-italic text-xs mt-1">University of Washington Department of Genome Sciences</p>
+                    <p class="subtitle text-xs">June 2025 - Present</p>
                 </div>
             </div>
-            <p class="body text-[14px] mt-2">Working in the Abitua Lab to assist in the development of a Python-based pipeline for light sheet microscopy image analysis of embryonic cell behaviors during morphogenesis in Notobranchius furzeri. Collaborated with the DeWitt Lab to develop and integrate mathematical models of cell movement patterns to the pipeline, in order to further understand the unique disperse-and-aggregate behavior.</p>
+            <p class="body text-[14px] mt-3">Working in the Abitua Lab to assist in the development of a Python-based pipeline for light sheet microscopy image analysis of embryonic cell behaviors during morphogenesis in <a class="subtitle-italic" style="font-weight: 400;">Notobranchius furzeri</a>. Collaborated with the DeWitt Lab to develop and integrate mathematical models of cell movement patterns to the pipeline, in order to further understand the unique disperse-and-aggregate behavior.</p>
         </div>
         <div>
             <div class="flex flex-row mt-5">
-                <img src="art/nurp.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <img src="art/nurp.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
                 <div class="flex flex-col ml-4">
-                    <p class="title text-lg">Undergraduate Mentee</p>
-                    <p class="subtitle-italic text-sm mt-0.5">Neuroscience Undergraduate Reading Program</p>
-                    <p class="subtitle text-sm">March 2025 - Present</p>
+                    <p class="title text-md">Undergraduate Mentee</p>
+                    <p class="subtitle-italic text-xs mt-1">Neuroscience Undergraduate Reading Program</p>
+                    <p class="subtitle text-xs">March 2025 - Present</p>
                 </div>
             </div>
-            <p class="body text-[14px] mt-2">NURP is a program that pairs undergraduate students with graduate/postdoc mentors to review, discuss and present findings from primary neuroscience research literature centered around a topic of interest each quarter. Through this program, I strengthened my scientific communication skills, ability to critically evaluate and contextualize evidence, and connected coursework to current research. Most recently, I investigated methods of invasive neural interfacing for restoring motor & somatosensory function after SCI.</p>
+            <p class="body text-[14px] mt-3">NURP is a program that pairs undergraduate students with graduate/postdoc mentors to review, discuss and present findings from primary neuroscience research literature centered around a topic of interest each quarter. Through this program, I strengthened my scientific communication skills, ability to critically evaluate and contextualize evidence, and connected coursework to current research. Most recently, I investigated methods of invasive neural interfacing for restoring motor & somatosensory function after SCI.</p>
         </div>
         <div>
             <div class="flex flex-row mt-5">
-                <img src="art/synaptech.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <img src="art/synaptech.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
                 <div class="flex flex-col ml-4">
-                    <p class="title text-lg">Allen Representative</p>
-                    <p class="subtitle-italic text-sm mt-0.5">Synaptech RSO</p>
-                    <p class="subtitle text-sm">June 2025 - Present</p>
+                    <p class="title text-md">Allen Representative</p>
+                    <p class="subtitle-italic text-xs mt-1">Synaptech RSO</p>
+                    <p class="subtitle text-xs">June 2025 - Present</p>
                 </div>
             </div>
-            <p class="body text-[14px] mt-2">In this role, I attend regular meetings to relay club progress information to maintain our affiliation with the Paul G. Allen School of Computer Science & Engineering. I also participate in Synaptech as a member of a project that aims to develop an adaptable method for decoding EEG signals and use them to assist users in daily computing tasks.</p>
+            <p class="body text-[14px] mt-3">In this role, I attend regular meetings to relay club progress information to maintain our affiliation with the Paul G. Allen School of Computer Science & Engineering. I also participate in Synaptech as a member of a project that aims to develop an adaptable method for decoding EEG signals and use them to assist users in daily computing tasks.</p>
         </div>
          <p class="title text-2xl mt-12">Professional</p>
          <div>
             <div class="flex flex-row mt-5">
-                <img src="art/eat-together.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <img src="art/eat-together.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
                 <div class="flex flex-col ml-4">
-                    <p class="title text-lg">UX/UI Designer</p>
-                    <p class="subtitle-italic text-sm mt-0.5">Eat Together</p>
-                    <p class="subtitle text-sm">March 2025 - Present</p>
+                    <p class="title text-md">UX/UI Designer</p>
+                    <p class="subtitle-italic text-xs mt-1">Eat Together</p>
+                    <p class="subtitle text-xs">March 2025 - Present</p>
                 </div>
             </div>
-            <p class="body text-[14px] mt-2">Working in a team environment to perform competitive analysis, conduct user research and create web & mobile design prototypes using Figma and hand off to software team. Leveraged time-management, collaboration, and human-centered design skills to contribute to a product that brings students together through shared meals. Notable projects include website redesign & assistance in implementation using React, HTML & JavaScript.</p>
+            <p class="body text-[14px] mt-3">Working in a team environment to perform competitive analysis, conduct user research and create web & mobile design prototypes using Figma and hand off to software team. Leveraged time-management, collaboration, and human-centered design skills to contribute to a product that brings students together through shared meals. Notable projects include website redesign & assistance in implementation using React, HTML & JavaScript.</p>
         </div>
          <div>
             <div class="flex flex-row mt-5">
-                <img src="art/lush.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <img src="art/lush.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
                 <div class="flex flex-col ml-4">
-                    <p class="title text-lg">Sales Ambassador</p>
-                    <p class="subtitle-italic text-sm mt-0.5">LUSH Fresh Handmade Cosmetics</p>
-                    <p class="subtitle text-sm">February 2024 - Present</p>
+                    <p class="title text-md">Sales Ambassador</p>
+                    <p class="subtitle-italic text-xs mt-1">LUSH Fresh Handmade Cosmetics</p>
+                    <p class="subtitle text-xs">February 2024 - Present</p>
                 </div>
             </div>
-            <p class="body text-[14px] mt-2">Facilitated a luxury customer experience through consultation-based service and product demonstrations in a fast-paced team environment, maintained organization and cleanliness of the shop, adhered to visual merchandising standards hosted private in-shop parties, and attended to opening/closing keyholder duties. Educated customers on ethical values and how to support in-store campaign initiatives aimed at human rights, sustainable production, freedom of movement, and digital ethics.</p>
+            <p class="body text-[14px] mt-3">Facilitated a luxury customer experience through consultation-based service and product demonstrations in a fast-paced team environment, maintained organization and cleanliness of the shop, adhered to visual merchandising standards hosted private in-shop parties, and attended to opening/closing keyholder duties. Educated customers on ethical values and how to support in-store campaign initiatives aimed at human rights, sustainable production, freedom of movement, and digital ethics.</p>
         </div>
          <p class="title text-2xl mt-12">Volunteer</p>
          <div>
             <div class="flex flex-row mt-5">
-                <img src="art/uw-bio.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <img src="art/uw-bio.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
                 <div class="flex flex-col ml-4">
-                    <p class="title text-lg">Biology Greenhouse Volunteer</p>
-                    <p class="subtitle-italic text-sm mt-0.5">University of Washington Department of Biology</p>
-                    <p class="subtitle text-sm">September 2025 - Present</p>
+                    <p class="title text-md">Biology Greenhouse Volunteer</p>
+                    <p class="subtitle-italic text-xs mt-1">University of Washington Department of Biology</p>
+                    <p class="subtitle text-xs">September 2025 - Present</p>
                 </div>
             </div>
-            <p class="body text-[14px] mt-2">The UW Biology Greenhouse is a living laboratory and teaching space that houses hundreds of plant species used for research, teaching, and outreach in plant biology and community ecology. During my time here, I assisted in the care and maintenance of a diverse collection of plant species, including rare and endangered specimens, gained hands-on experience in horticulture, plant biology, and conservation practices.</p>
+            <p class="body text-[14px] mt-3">The UW Biology Greenhouse is a living laboratory and teaching space that houses hundreds of plant species used for research, teaching, and outreach in plant biology and community ecology. During my time here, I assisted in the care and maintenance of a diverse collection of plant species, including rare and endangered specimens, gained hands-on experience in horticulture, plant biology, and conservation practices.</p>
         </div>
          <div>
             <div class="flex flex-row mt-5">
-                <img src="art/first.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <img src="art/first.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
                 <div class="flex flex-col ml-4">
-                    <p class="title text-lg">Lead Team Queuer</p>
-                    <p class="subtitle-italic text-sm mt-0.5">FIRST Robotics</p>
-                    <p class="subtitle text-sm">November 2021 - April 2024</p>
+                    <p class="title text-md">Lead Team Queuer</p>
+                    <p class="subtitle-italic text-xs mt-1">FIRST Robotics</p>
+                    <p class="subtitle text-xs">November 2021 - April 2024</p>
                 </div>
             </div>
-            <p class="body text-[14px] mt-2">Contributed 400+ volunteer hours to FIRST Robotics Competition and FIRST Tech Challenge programs. Ensured smooth participant flow, collaborated with field supervisors, presented queuing path training for large-scale event participants (~2,000+ attendees) Trained, supervised and supported queuing team (5-10 people) in their duties of adhering to the event schedule and managing walking paths. Maintained clear line of communication between event staff, key volunteers, venue management and other queuing staff, and resolved conflicts for a safe, enjoyable and smooth event experience for all guests.</p>
+            <p class="body text-[14px] mt-3">Contributed 400+ volunteer hours to FIRST Robotics Competition and FIRST Tech Challenge programs. Ensured smooth participant flow, collaborated with field supervisors, presented queuing path training for large-scale event participants (~2,000+ attendees) Trained, supervised and supported queuing team (5-10 people) in their duties. Maintained clear line of communication between event staff, key volunteers, venue management and other queuing staff, and resolved conflicts for a safe & enjoyable experience for guests.</p>
         </div>
     </section>
     <section id="education" class="mt-24">
         <p class="title text-2xl">Education</p>
-
+         <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/uw.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-md">University of Washington</p>
+                    <p class="subtitle-italic text-xs mt-1">B.S. in Computer Science, Minor in Neural Computation & Engineering</p>
+                    <p class="subtitle text-xs">September 2024 - June 2028</p>
+                </div>
+            </div>
+            <div class="ml-18 mt-2">
+                <p class="subtitle text-xs mt-3 text-gray-600 mb-2">Biology & Neuroscience</p>
+                <div class="flex flex-row align-middle">
+                    <div class="bg-[#F3E5F2] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">AMATH 342</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Neural Coding & Computation</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#F3F2E5] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">PHIL 242</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Medical Ethics</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#E5F3E6] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">NEUSCI 450</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Research Literature in Neuroscience</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#EFEFEF] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">BIOEN 460</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Neural Engineering</p>
+                </div>
+                <p class="subtitle text-xs mt-3 text-gray-600 mb-2">Computer Science</p>
+                <div class="flex flex-row align-middle">
+                    <div class="bg-[#DFE9F5] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">CSE 331</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Software Implementation & Design</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#DFE9F5] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">CSE 351</p>
+                    </div>
+                    <p class="body ml-3 text-sm">The Hardware/Software Interface</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#DFE9F5] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">CSE 311</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Foundations of Computing I (Discrete Math & Logic)</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#DFE9F5] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">CSE 480</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Computer Ethics Seminar</p>
+                </div>
+                <p class="subtitle text-xs mt-3 text-gray-600">Foundational</p>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#F3F2E5] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">ENGL 288</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Professional & Technical Writing</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#F3E5F2] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">MATH 12X</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Calculus w/ Analytic Geometry I, II, III</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#F3E5F2] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">MATH 12X</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Linear Algebra w/ Applications</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#DFE9F5] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">CSE 12X</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Introductory Programming I, II, III</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#E5F3E6] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">BIOL 180</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Introductory Biology I</p>
+                </div>
+                <div class="flex flex-row align-middle mt-1.5">
+                    <div class="bg-[#E5F3E6] rounded-sm">
+                        <p class="body text-[12px] mx-2 my-0.5">BIOL 130</p>
+                    </div>
+                    <p class="body ml-3 text-sm">Introductory Neuroscience</p>
+                </div>
+            </div>
+        </div>
+          <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/sammamish.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-md">Sammamish High School</p>
+                    <p class="subtitle-italic text-xs mt-1">High School Diploma, International Spanish Academy Diploma</p>
+                    <p class="subtitle text-xs">September 2020 - June 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="recommendations" class="mt-24">
+        <p class="title text-2xl">Recommendations</p>
+        
     </section>
     <section id="certifications" class="mt-24">
         <p class="title text-2xl">Certifications</p>
-    </section>
-    <section id="testimonials" class="mt-24">
-        <p class="title text-2xl">Certifications</p>
+        <div class="flex flex-row mt-5">
+            <img src="art/unity.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
+            <div class="flex flex-col ml-4">
+                <p class="title text-md">Unity Certified User: Programmer</p>
+                <p class="subtitle-italic text-xs mt-1">Certiport/Credential ID: w9yyu-Fa4p</p>
+                <p class="subtitle text-xs">June 2022</p>
+            </div>
+        </div>
+        <div class="flex flex-row mt-5">
+            <img src="art/microsoft.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
+            <div class="flex flex-col ml-4">
+                <p class="title text-md">Microsoft Technology Associate: Programming in Java</p>
+                <p class="subtitle-italic text-xs mt-1">Certiport/Credential ID: L5DS-sFcG</p>
+                <p class="subtitle text-xs">May 2022</p>
+            </div>
+        </div>
+         <div class="flex flex-row mt-5">
+            <img src="art/microsoft.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
+            <div class="flex flex-col ml-4">
+                <p class="title text-md">Microsoft Technology Associate: Software Development Fundamentals</p>
+                <p class="subtitle-italic text-xs mt-1">Certiport/Credential ID: M5YN-s28V</p>
+                <p class="subtitle text-xs">June 2022</p>
+            </div>
+        </div>
+         <div class="flex flex-row mt-5">
+            <img src="art/microsoft.svg" class="w-14 h-14 mt-1 aspect-square shadow-image"/>
+            <div class="flex flex-col ml-4">
+                <p class="title text-md">Microsoft Technology Associate: Mobility & Device Fundamentals</p>
+                <p class="subtitle-italic text-xs mt-1">Certiport/Credential ID: nBHR-DTPb</p>
+                <p class="subtitle text-xs">June 2022</p>
+            </div>
+        </div>
     </section>
     <section id="contact" class="mt-24">
-        <p class="title text-2xl">Contact </p>
+        <p class="title text-2xl">Contact</p>
+        <div class="flex flex-row mt-5">
+            <div class="flex flex-row place-items-center bg-[#EAF1F9] gap-5 rounded-sm shadow-image">
+                <img src="icon/linkedin-icon.svg" class="ml-5 my-5"/>
+                <p class="body mr-5">LinkedIn</p>
+            </div>
+             <div class="flex flex-row place-items-center bg-[#E6E6E6] gap-5 rounded-sm shadow-image ml-4">
+                <img src="icon/github-icon.svg" class="ml-5 my-5"/>
+                <p class="body mr-5">GitHub</p>
+            </div>
+             <div class="flex flex-row place-items-center bg-[#FDECFD] gap-5 rounded-sm shadow-image ml-4">
+                <img src="icon/dribble-icon.svg" class="ml-5 my-5"/>
+                <p class="body mr-5">Dribbble</p>
+            </div>
+        </div>
+        <p class="body mt-5">Alternatively, you can contact me by email at <a class="body ml-1" style="font-weight: 500;">sebhr25 [at] uw.edu</a></p>
     </section>
-    <section id="resume" class="mt-24">
+    <section id="resume" class="mt-24 mb-50">
         <p class="title text-2xl">Resume</p>
     </section>
   </main>
