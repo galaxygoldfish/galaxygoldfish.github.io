@@ -31,22 +31,25 @@
                 <a href="#resume" class="block body text-[#999999] text-[16px]" data-section="resume">Resume</a>
             </nav>
         </div>
-        <div class="fixed bottom-4 ml-4 mb-8 flex space-x-4">
-            <a href="#" aria-label="Dribbble" target="_blank">
-                <img src="icon/dribble-icon.svg" />
-            </a>
-            <a href="#" aria-label="GitHub" target="_blank">
-                <img src="icon/github-icon.svg" />
-            </a>
-            <a href="#" aria-label="LinkedIn" target="_blank">
-                <img src="icon/linkedin-icon.svg" />
-            </a>
+        <div class="fixed bottom-4 ml-4 mb-8 flex space-x-1">
+            <a href="" class="group relative size-10 inline-block">
+             <img src="icon/dribble-icon.svg" class="absolute top-0 left-0 group-hover:opacity-0 transition-opacity" />
+             <img src="icon/dribble-icon-filled.svg" class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+           </a>
+            <a href="https://github.com/galaxygoldfish" class="group relative size-10 inline-block">
+             <img src="icon/github-icon.svg" class="absolute top-0 left-0 group-hover:opacity-0 transition-opacity" />
+             <img src="icon/github-icon-filled.svg" class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+           </a>
+           <a href="https://linkedin.com/in/sebastianhr" class="group relative size-10 inline-block">
+             <img src="icon/linkedin-icon.svg" class="absolute top-0 left-0 group-hover:opacity-0 transition-opacity" />
+             <img src="icon/linkedin-icon-filled.svg" class="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+           </a>
         </div>
     </div>
   </aside>
 
   <aside class="w-60 fixed right-0 top-0 h-full p-6">
-   
+   <p class="body text-gray-400 fixed bottom-10 ml-10">© 2025</p>
   </aside>
 
   <div class="ml-60 mr-60 w-full flex place-content-center">
@@ -68,7 +71,7 @@
             <img src="art/groovechart-card.svg" class="shadow-image aspect-auto h-80" />
             <img src="art/ubiquifi-card.svg" class="shadow-image aspect-auto h-80" />
             <img src="art/pineapple-card.svg" class="shadow-image aspect-auto h-80" />
-            <img src="art/waveslider-card.svg" class="shadow-image aspect-auto h-80" />
+            <img src="art/waveslider-card.svg" class="shadow-image aspect-auto h-80 mr-10" />
             </div>
             <div class="pointer-events-none absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent"></div>
         </div>
@@ -320,18 +323,24 @@
     <section id="contact" class="mt-24">
         <p class="title text-2xl">Contact</p>
         <div class="flex flex-row mt-5">
-            <div class="flex flex-row place-items-center bg-[#EAF1F9] gap-5 rounded-sm shadow-image">
-                <img src="icon/linkedin-icon.svg" class="ml-5 my-5"/>
-                <p class="body mr-5">LinkedIn</p>
-            </div>
-             <div class="flex flex-row place-items-center bg-[#E6E6E6] gap-5 rounded-sm shadow-image ml-4">
-                <img src="icon/github-icon.svg" class="ml-5 my-5"/>
-                <p class="body mr-5">GitHub</p>
-            </div>
-             <div class="flex flex-row place-items-center bg-[#FDECFD] gap-5 rounded-sm shadow-image ml-4">
-                <img src="icon/dribble-icon.svg" class="ml-5 my-5"/>
-                <p class="body mr-5">Dribbble</p>
-            </div>
+            <a href="https://linkedin.com/sebastianhr">
+               <div class="flex flex-row place-items-center bg-[#EAF1F9] gap-5 rounded-sm shadow-image">
+                    <img src="icon/linkedin-icon.svg" class="ml-5 my-5"/>
+                    <p class="body mr-5">LinkedIn</p>
+                </div> 
+            </a>
+            <a href="https://github.com/galaxygoldfish">
+               <div class="flex flex-row place-items-center bg-[#E6E6E6] gap-5 rounded-sm shadow-image ml-4">
+                    <img src="icon/github-icon.svg" class="ml-5 my-5"/>
+                    <p class="body mr-5">GitHub</p>
+                </div> 
+            </a>
+            <a>
+                <div class="flex flex-row place-items-center bg-[#FDECFD] gap-5 rounded-sm shadow-image ml-4">
+                    <img src="icon/dribble-icon.svg" class="ml-5 my-5"/>
+                    <p class="body mr-5">Dribbble</p>
+                </div>
+            </a>
         </div>
         <p class="body mt-5">Alternatively, you can contact me by email at <a class="body ml-1" style="font-weight: 500;">sebhr25 [at] uw.edu</a></p>
     </section>
