@@ -1,278 +1,215 @@
 <!doctype html>
-<html>
+<html lang="en" class="h-full scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <script src="script.js"></script>
     <link href="output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[url('art/background.svg')] bg-cover bg-center min-h-screen flex flex-col">
-    <!--Landing-->
-    <nav id="navbar" class="flex flex-col  md:flex-row w-full h-auto justify-between fixed pt-10 transition-all duration-500 ease-in-out">
-        <div class="flex flex-col md:flex-row w-full md:justify-between md:w-full transition-all duration-400">
-            <div class="flex flex-row w-full md:w-auto justify-between md:order-last">
-                <button id="menu-toggle" class="ml-10 md:hidden">
-                    <img src="icon/bar-overflow.svg" class="pt-1 size-[24px]">
-                </button>            
-                <script>
-                    // Expanding menu (on small device sizes) on button click
-                    document.getElementById("menu-toggle").addEventListener("click", function() {
-                        const menu = document.getElementById("menu");
-                        if (menu.classList.contains("max-h-0")) {
-                            menu.classList.remove("max-h-0", "opacity-0", "invisible");
-                            menu.classList.add("max-h-[500px]", "opacity-100", "visible");
-                            navbar.classList.add("backdrop-blur-lg", "bg-white/30", "shadow-sm", "pb-7", "pt-7");
-                        } else {
-                            menu.classList.remove("max-h-[500px]", "opacity-100", "visible");
-                            menu.classList.add("max-h-0", "opacity-0", "invisible");
-                        }
-                    });
-                </script>
-                <div class="bg-black group hover:bg-[#00000000] border-black border-2 rounded-md mr-10 md:mr-15 transition-all duration-200 hover:scale-[1.02]">
-                    <a href="#" class="inter-menu m-6 text-white group-hover:invert">CONTACT</a>
-                </div>
+
+
+<body class="flex">
+  <aside class="w-60 fixed h-full left-0 top-0 p-6 mt-5 ml-5 flex flex-col justify-between">
+    <div class="relative">
+      <div class="title text-[22px] mb-3">Sebastian Hriscu</div>
+        <div class="flex-row relative ml-2">
+            <div class="absolute top-0 left-0 h-full flex">
+                <div class="w-[1.5px] bg-black mt-1 mb-1"></div>
+                <img id="indicator" src="icon/scroll-indicator.svg" class="relative w-6 h-6 -left-[13px] transition-all duration-200" />
             </div>
-            <ul class="hidden order-first md:flex flex-row justify-start gap-x-6 md:gap-x-10 px-[4rem]">
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="index.html" class="inter-menu">HOME</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="index.html#about" class="inter-menu">ABOUT</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="index.html#experience" class="inter-menu">EXPERIENCE</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="portofolio.html" class="inter-menu">PORTFOLIO</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="index.html#writing" class="inter-menu">WRITING</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">RESUME</a></li>
-            </ul>
-            <ul id="menu" class="max-h-0 opacity-0 invisible flex-col justify-center ml-10 transition-all duration-400 ease-in-out">
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-10"><a href="index.html" class="inter-menu">HOME</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="index.html#about" class="inter-menu">ABOUT</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="index.html#experience" class="inter-menu">EXPERIENCE</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="portofolio.html" class="inter-menu">PORTFOLIO</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="index.html#writing" class="inter-menu">WRITING</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="#" class="inter-menu">RESUME</a></li>
-            </ul>
+            <nav class="pl-4 space-y-2 text-sm relative z-10" id="sidebar">
+                <a href="#overview" class="block body text-[#999999] text-[16px]" data-section="overview">Overview</a>
+                <a href="#portfolio" class="block body text-[#999999] text-[16px]" data-section="portfolio">Portfolio</a>
+                <a href="#skills" class="block body text-[#999999] text-[16px]" data-section="skills">Skills</a>
+                <a href="#experience" class="block body text-[#999999] text-[16px]" data-section="experience">Experience</a>
+                <a href="#education" class="block body text-[#999999] text-[16px]" data-section="education">Education</a>
+                <a href="#certifications" class="block body text-[#999999] text-[16px]" data-section="certifications">Certifications</a>
+                <a href="#testimonials" class="block body text-[#999999] text-[16px]" data-section="testimonials">Testimonials</a>
+                <a href="#contact" class="block body text-[#999999] text-[16px]" data-section="contact">Contact</a>
+                <a href="#resume" class="block body text-[#999999] text-[16px]" data-section="resume">Resume</a>
+            </nav>
         </div>
-    </nav>
-    <div class="w-full md:max-w-8xl mx-auto flex flex-col min-h-screen justify-end px-15 py-10">
-        <div class="flex flex-col md:flex-row items-center justify-between w-full mx-auto pb-10">
-            <div class="flex flex-col items-center md:items-start text-center md:text-left order-last md:order-first">
-                <h1 class="neue-medium leading-none text-6xl md:text-8xl">SEBASTIAN <br> HRISCU</h1>
-                <p class="neue-regular pt-3">Mobile Development, UX/UI &amp; Neural Systems</p>
-                <div class="flex flex-row w-full gap-x-4 pt-6 justify-center md:justify-start">
-                    <img src="icon/linkedin.svg" class="w-7 h-7">
-                    <img src="icon/github.svg" class="w-7 h-7">
-                    <img src="icon/dribbble.svg" class="w-7 h-7">
-                </div>
-            </div>
-            <img src="art/me.png" class="w-40 md:w-56 mb-10 md:mb-0">
-        </div>
-    </div>
-    </div class="w-full flex flex-col px-15 items-center">
-        <!--ABOUT ME-->
-        <div id="about" class="max-w-5/6 md:max-w-6xl place-self-center mt-32 md:mt-52">
-            <h2 class="neue-regular place-self-center md:place-self-start">About me</h2>
-            <p class="inter-body pt-7 place-self-center md:place-self-start text-center md:text-start">Hi! My name is Sebastian and I’m currently a first-year student at the University of Washington (Seattle), studying Computer Science and Neural Computation & Engineering. In the technical realm, I’m interested in native mobile & wearable development, interface design, and computational neuroscience. In my free time, I love travel & cycling, and you can usually find me listening to house or pop music.</p>
-        </div>
-        <!--TECHNOLOGIES & LANGUAGES-->
-        <div class="max-w-5/6 md:w-6xl place-self-center mt-28">
-            <h2 class="neue-regular place-self-center md:place-self-start">Technologies & Languages</h2>
-            <div class="flex flex-wrap gap-4 mt-7 justify-center md:justify-start">
-                <a href="https://figma.com">
-                    <div class="flex items-center gap-2 px-2 py-2 border-2 bg-white border-black rounded-md transition-all duration-250 group hover:bg-black hover:scale-[1.02]">
-                        <img src="icon/figma.svg" class="w-7 h-7 group-hover:invert">
-                        <span class="text-black inter-chip pr-2 group-hover:text-white">Figma</span>
-                    </div>
-                </a>
-                <a href="https://kotlinlang.org">
-                    <div class="flex items-center gap-2 px-2 py-2 border-2 bg-white border-black rounded-md transition-all duration-250 group hover:bg-black hover:scale-[1.02]">
-                        <img src="icon/kotlin.svg" class="w-7 h-7 group-hover:invert">
-                        <span class="text-black inter-chip pr-2 group-hover:text-white">Kotlin</span>
-                    </div>
-                </a>
-                <a href="https://developer.android.com/compose">
-                    <div class="flex items-center gap-2 px-2 py-2 border-2 bg-white border-black rounded-md transition-all duration-250 group hover:bg-black hover:scale-[1.02]">
-                        <img src="icon/jpkcmp.svg" class="w-7 h-7 group-hover:invert">
-                        <span class="text-black inter-chip pr-2 group-hover:text-white">Jetpack Compose</span>
-                    </div>
-                </a>
-                <a href="https://python.org">
-                   <div class="flex items-center gap-2 px-2 py-2 border-2 bg-white border-black rounded-md transition-all duration-250 group hover:bg-black hover:scale-[1.02]">
-                        <img src="icon/python.svg" class="w-7 h-7 group-hover:invert">
-                        <span class="text-black inter-chip pr-2 group-hover:text-white">Python</span>
-                    </div> 
-                </a>
-                <a href="https://tailwindcss.com">
-                    <div class="flex items-center gap-2 px-2 py-2 border-2 bg-white border-black rounded-md transition-all duration-250 group hover:bg-black hover:scale-[1.02]">
-                        <img src="icon/tailwind.svg" class="w-7 h-7 group-hover:invert">
-                        <span class="text-black inter-chip pr-2 group-hover:text-white">Tailwind</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!--RECENT EXPERIENCES-->
-        <div id="experience" class="max-w-5/6 md:max-w-6xl place-self-center mt-28">
-            <h2 class="neue-regular place-self-center md:place-self-start">Recent Experiences</h2>
-            <div class="flex flex-col mt-10">
-                <div class="flex flex-col md:flex-row items-center">
-                    <img src="art/eat-together.png" class="w-[60px] h-[60px] mb-7 md:mb-0">
-                    <div class="flex flex-col ml-4 w-full place-items-center md:place-items-start">
-                        <a class="neue-card-label">UX/UI Designer</a>
-                        <a class="inter-card-label-subtitle text-center md:text-start">Eat Together (Mar 2024 - Present)</a>
-                    </div>
-                </div>
-                <p class="mt-4 inter-body text-center md:text-start">Working within a multi-team startup to conduct user research, create design prototypes using Figma and hand off to software team. Leveraged time-management, collaboration, and human-centered design skills to contribute to a project that brings students together through shared meals.</p>
-            </div>
-            <div class="flex flex-col mt-7">
-                <div class="flex flex-col md:flex-row items-center">
-                    <img src="art/lush.png" class="w-[60px] h-[60px] mb-7 md:mb-0">
-                    <div class="flex flex-col ml-4 w-full place-items-center md:place-items-start">
-                        <a class="neue-card-label">Sales Ambassador</a>
-                        <a class="inter-card-label-subtitle text-center md:text-start">LUSH Cosmetics (Feb 2024 - Present)</a>
-                    </div>
-                </div>
-                <p class="mt-4 inter-body text-center md:text-start">Facilitated a luxury customer experience through consultation-based sales and product demonstrations in a fast-paced team environment. Attended to keyholder duties and educated clients about brand values and how to have an impact by participating in ethical and environmental campaigns.</p>
-            </div>
-            <div class="flex flex-col mt-7">
-                <div class="flex flex-col md:flex-row items-center">
-                    <img src="art/first.png" class="w-[60px] h-[60px] mb-7 md:mb-0">
-                    <div class="flex flex-col ml-4 w-full place-items-center md:place-items-start">
-                        <a class="neue-card-label">Lead Team Queuer</a>
-                        <a class="inter-card-label-subtitle text-center md:text-start">FIRST (Oct 2021 - Apr 2024)</a>
-                    </div>
-                </div>
-                <p class="mt-4 inter-body text-center md:text-start">Coordinated guest flow and match scheduling for large-scale local, regional and national level robotics events. Trained and supervised teams of volunteers who assisted in running events. Demonstrated organizational, communication, and leadership skills for an enjoyable and fun competition experience.</p>
-            </div>
-            <div class="flex flex-col mt-7 text-center md:text-start">
-                <div class="flex flex-col md:flex-row items-center">
-                    <img src="art/robototes.png" class="w-[60px] h-[60px] mb-7 md:mb-0">
-                    <div class="flex flex-col ml-4 w-full place-items-center md:place-items-start">
-                        <a class="neue-card-label">Logistics Director</a>
-                        <a class="inter-card-label-subtitle text-center md:text-start">Robototes (Sep 2021 - Jun 2024)</a>
-                    </div>
-                </div>
-                <p class="mt-4 inter-body text-center md:text-start">Responsible for the coordination of team travel, food, transport, communication, calendar management for robotics team having around 100 members. Led the planning of twice-yearly, large-scale, hosted competitions having over 2,000 attendees. Participated in and maintained documentation of leadership team meetings.</p>
-            </div>
-        </div>
-    </div>
-    <!--PORTFOLIO-->
-    <div id="portfolio" class="w-5/6 md:max-w-6xl place-self-center mt-28">
-        <h2 class="neue-regular place-self-center md:place-self-start">Portfolio</h2>
-        <div class="flex flex-col md:flex-row place-items-center md:justify-start mt-10">
-            <!--GROOVECHART-->
-            <a href="projects/groovechart.html" class="flex flex-col hover:scale-[1.01] transition-all group transition-duration-300 ease-in-out">
-                <div class="border-2 bg-white border-black rounded-md mb-6 md:mb-0 w-xs group-hover:bg-black">
-                    <img src="art/groovechart.png" class="rounded-md">
-                    <div class="w-full bg-black h-0.5"></div>
-                    <div class="ml-4 flex flex-col group-hover:invert">
-                        <p class="jb-mono-portfolio-card mt-3">Groovechart</p>
-                        <p class="inter-body mt-3">Feb 2024 - Present</p>
-                        <p class="inter-body">Native Android/iOS App</p>
-                    </div>
-                    <div class="flex flex-row w-xs justify-end mt-10 group-hover:invert">
-                        <img src="icon/arrow-down-end.svg" class="size-[24px] mr-4 mb-4">
-                    </div>
-                </div>
+        <div class="fixed bottom-4 ml-4 mb-5 flex space-x-4">
+            <a href="#" aria-label="Dribbble" target="_blank">
+                <img src="icon/dribble-icon.svg" />
             </a>
-            <!--WAVESLIDER-->
-            <a href="projects/waveslider.html" class="flex flex-col hover:scale-[1.01] transition-all group transition-duration-300 ease-in-out">
-                <div class="border-2 bg-white border-black rounded-md md:ml-6 mb-6 md:mb-0 w-xs group-hover:bg-black">
-                    <img src="art/waveslider.png" class="rounded-md">
-                    <div class="w-full bg-black h-0.5"></div>
-                    <div class="ml-4 flex flex-col group-hover:invert">
-                        <p class="jb-mono-portfolio-card mt-3">WaveSlider</p>
-                        <p class="inter-body mt-3">Nov 2023 - Oct 2024</p>
-                        <p class="inter-body">Native Android Library</p>
-                    </div>
-                    <div class="flex flex-row w-xs justify-end mt-10 group-hover:invert">
-                        <img src="icon/arrow-down-end.svg" class="size-[24px] mr-4 mb-4">
-                    </div>
-                </div>
+            <a href="#" aria-label="GitHub" target="_blank">
+                <img src="icon/github-icon.svg" />
             </a>
-            <!--SCOUTING-->
-            <a href="projects/scouting.html" class="flex flex-col hover:scale-[1.01] transition-all group transition-duration-300 ease-in-out">
-                <div class="border-2 bg-white border-black rounded-md md:ml-6 mb-6 md:mb-0 w-xs group-hover:bg-black">
-                    <img src="art/scouting.png" class="rounded-md">
-                    <div class="w-full bg-black h-0.5"></div>
-                    <div class="ml-4 flex flex-col group-hover:invert">
-                        <p class="jb-mono-portfolio-card mt-3">Scouting App</p>
-                        <p class="inter-body mt-3">Feb 2022 - Apr 2023</p>
-                        <p class="inter-body">Android (tablet) App</p>
-                    </div>
-                    <div class="flex flex-row w-xs justify-end mt-10 group-hover:invert">
-                        <img src="icon/arrow-down-end.svg" class="size-[24px] mr-4 mb-4">
-                    </div>
-                </div>
-            </a>
-            <!--OVERFLOW CARD-->
-            <a href="portofolio.html">
-                <div class="flex flex-row md:flex-col justify-center items-center border-2 border-black rounded-md w-[20rem] md:w-auto md:h-[23.15rem] md:ml-6 hover:bg-black hover:scale-[1.01] transition-all group transition-duration-300 ease-in-out">
-                    <img src="icon/bar-overflow.svg" class="size-[24px] my-6 md:my-0 md:mx-6 md:place-self-center group-hover:invert">
-                    <p class="neue-regular sm:text-2xl md:text-[0px] ml-6 md:ml-0 md:hidden">View more</p>
-                </div>
+            <a href="#" aria-label="LinkedIn" target="_blank">
+                <img src="icon/linkedin-icon.svg" />
             </a>
         </div>
     </div>
-    <!--CERTIFICATIONS & COURSES-->
-    <div class="w-5/6 md:max-w-6xl place-self-center mt-28">
-        <h2 class="neue-regular place-self-center md:place-self-start">Certifications & Courses</h2>
-        <div class="flex flex-col md:flex-row items-center w-ful mt-10">
-            <img src="art/unity.png" class="w-[60px] h-[60px] mb-5 md:mb-0">
-            <div class="flex flex-col md:ml-4">
-                <a class="neue-card-label text-center md:text-start">Unity Certified User: Programmer</a>
-                <a class="inter-card-label-subtitle text-center md:text-start md:flex md:flex-row">June 2022<p class="collapse md:visible inter-card-label-subtitle">: (Certiport/Credential ID: w9yyu-Fa4p)</p></a>
-            </div>
+  </aside>
+
+  <aside class="w-60 fixed right-0 top-0 h-full p-6">
+   
+  </aside>
+
+  <div class="ml-60 mr-60 w-full flex place-content-center">
+  <main class="flex-1 overflow-y-auto max-w-3/4">
+    <section id="overview" class="flex flex-row gap-x-10 mt-20">
+        <img src="art/me.png" class="aspect-square w-30 h-40 object-cover rounded-sm"/>
+        <div class="">
+            <p class="title text-2xl">Student, designer, developer & researcher</p>
+            <p class="body mt-3">Hi! My name is Sebastian and I’m an undergraduate studying <u>Computer Science</u> and <br>
+                <u>Neural Computation & Engineering</u> at the University of Washington in Seattle. 
+                My technical interests include mobile & web development, interface design, neurotechnology and the intersections between computing and the health sciences.
+                Outside of my academic work, I also enjoy cycling, tennis, golf and camping.</p>
         </div>
-        <div class="flex flex-col md:flex-row items-center w-full md:mt-7">
-            <img src="art/microsoft.png" class="w-[60px] h-[60px] mb-5 md:mb-0">
-            <div class="flex flex-col md:ml-4">
-                <a class="neue-card-label text-center md:text-start">Microsoft Technology Associate: Software Development Fundamentals</a>
-                <a class="inter-card-label-subtitle text-center md:text-start md:flex md:flex-row">June 2022<p class="collapse md:visible inter-card-label-subtitle">: (Certiport/Credential ID: M5YN-s28V)</p></a>
+    </section>
+    <section id="portfolio" class="flex flex-col mt-20">
+        <p class="title text-2xl">Projects</p>
+        <div class="relative mt-5">
+            <div class="flex flex-row gap-x-3 overflow-x-auto scrollbar-hide pr-10">
+            <img src="art/groovechart-card.svg" />
+            <img src="art/ubiquifi-card.svg" />
+            <img src="art/pineapple-card.svg" />
+            <img src="art/waveslider-card.svg" />
             </div>
+            <div class="pointer-events-none absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent"></div>
         </div>
-        <div class="flex flex-col md:flex-row items-center w-full md:mt-7">
-            <img src="art/microsoft.png" class="w-[60px] h-[60px] mb-5 md:mb-0">
-            <div class="flex flex-col md:ml-4">
-                <a class="neue-card-label text-center md:text-start">Microsoft Technology Associate: Programming Using Java</a>
-                <a class="inter-card-label-subtitle text-center md:text-start md:flex md:flex-row">May 2022<p class="collapse md:visible inter-card-label-subtitle">: (Certiport/Credential ID: L5DS-sFcG)</p></a>
-            </div>
-        </div>
-        <div class="flex flex-col md:flex-row items-center w-full md:mt-7">
-            <img src="art/microsoft.png" class="w-[60px] h-[60px] mb-5 md:mb-0">
-            <div class="flex flex-col md:ml-4">
-                <a class="neue-card-label text-center md:text-start">Microsoft Technology Associate: Mobility & Device Fundamentals</a>
-                <a class="inter-card-label-subtitle text-center md:text-start md:flex md:flex-row">June 2022<p class="collapse md:visible inter-card-label-subtitle">: (Certiport/Credential ID: nBHR-DTPb)</p></a>
-            </div>
-        </div>
-    </div>
-    <!--WRITING-->
-    <div id="writing" class="w-5/6 md:max-w-6xl place-self-center mt-28">
-        <h2 class="neue-regular place-self-center md:place-self-start">Writing</h2>
-        
-    </div>
-    <!--EDUCATION-->
-    <div class="w-5/6 md:max-w-6xl place-self-center mt-28">
-        <h2 class="neue-regular place-self-center md:place-self-start">Education</h2>
-        <div class="flex flex-col mt-10">
-            <div class="flex flex-col md:flex-row items-center">
-                <img src="art/uofwa.png" class="w-[60px] h-[60px] mb-7 md:mb-0">
-                <div class="flex flex-col ml-4 w-full place-items-center md:place-items-start">
-                    <a class="neue-card-label">University of Washington</a>
-                    <a class="inter-card-label-subtitle text-center md:text-start">Seattle, WA (Sep 2024 - Present)</a>
+    </section>
+    <section id="skills" class="flex flex-col mt-24">
+        <p class="title text-2xl">Skills</p>
+        <p class="subtitle text-xs mt-3 text-gray-600">Programming</p>
+        <p class="body mt-1">Kotlin, Java, TypeScript, HTML, CSS, Swift, Python</p>
+        <p class="subtitle text-xs mt-3 text-gray-600">Libraries</p>
+        <p class="body mt-1">NumPy, Matplotlib, Pandas, Tailwind, React, Svelte, KMM, AndroidX, Gson, Jetpack Compose, Firebase</p>
+        <p class="subtitle text-xs mt-3 text-gray-600">Tools & Technologies</p>
+        <p class="body mt-1">Android Studio, XCode, Jupyter, Visual Studio Code, Figma, Unity, Git, Google Colab</p>
+        <p class="subtitle text-xs mt-3 text-gray-600">Interpersonal</p>
+        <p class="body mt-1">Leader, Team Player, Iterative Designer, Project Manager, Open-Source Collaborator</p>
+    </section>
+    <section id="experience" class="flex flex-col mt-24">
+        <p class="title text-2xl">Academic</p>
+        <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/uw-gs.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-lg">Research Assistant</p>
+                    <p class="subtitle-italic text-sm mt-0.5">University of Washington Department of Genome Sciences</p>
+                    <p class="subtitle text-sm">June 2025 - Present</p>
                 </div>
             </div>
-            <p class="mt-4 inter-body text-center md:text-start">Currently pursuing a Bachelor of Science in Computer Science (minor in Neural Computation & Engineering)</p>
+            <p class="body text-[14px] mt-2">Working in the Abitua Lab to assist in the development of a Python-based pipeline for light sheet microscopy image analysis of embryonic cell behaviors during morphogenesis in Notobranchius furzeri. Collaborated with the DeWitt Lab to develop and integrate mathematical models of cell movement patterns to the pipeline, in order to further understand the unique disperse-and-aggregate behavior.</p>
         </div>
-        <div class="flex flex-col mt-7">
-            <div class="flex flex-col md:flex-row items-center">
-                <img src="art/sammamish.png" class="w-[60px] h-[60px] mb-7 md:mb-0">
-                <div class="flex flex-col ml-4 w-full place-items-center md:place-items-start">
-                    <a class="neue-card-label">Sammamish High School</a>
-                    <a class="inter-card-label-subtitle text-center md:text-start">Bellevue, WA (Sep 2020 - Jun 2024)</a>
+        <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/nurp.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-lg">Undergraduate Mentee</p>
+                    <p class="subtitle-italic text-sm mt-0.5">Neuroscience Undergraduate Reading Program</p>
+                    <p class="subtitle text-sm">March 2025 - Present</p>
                 </div>
             </div>
-            <p class="mt-4 inter-body text-center md:text-start">Graduated with High School Diploma, Seal of Biliteracy in Spanish & ISA Diploma</p>
+            <p class="body text-[14px] mt-2">NURP is a program that pairs undergraduate students with graduate/postdoc mentors to review, discuss and present findings from primary neuroscience research literature centered around a topic of interest each quarter. Through this program, I strengthened my scientific communication skills, ability to critically evaluate and contextualize evidence, and connected coursework to current research. Most recently, I investigated methods of invasive neural interfacing for restoring motor & somatosensory function after SCI.</p>
         </div>
-    </div>
-    <br></br>
+        <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/synaptech.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-lg">Allen Representative</p>
+                    <p class="subtitle-italic text-sm mt-0.5">Synaptech RSO</p>
+                    <p class="subtitle text-sm">June 2025 - Present</p>
+                </div>
+            </div>
+            <p class="body text-[14px] mt-2">In this role, I attend regular meetings to relay club progress information to maintain our affiliation with the Paul G. Allen School of Computer Science & Engineering. I also participate in Synaptech as a member of a project that aims to develop an adaptable method for decoding EEG signals and use them to assist users in daily computing tasks.</p>
+        </div>
+         <p class="title text-2xl mt-12">Professional</p>
+         <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/eat-together.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-lg">UX/UI Designer</p>
+                    <p class="subtitle-italic text-sm mt-0.5">Eat Together</p>
+                    <p class="subtitle text-sm">March 2025 - Present</p>
+                </div>
+            </div>
+            <p class="body text-[14px] mt-2">Working in a team environment to perform competitive analysis, conduct user research and create web & mobile design prototypes using Figma and hand off to software team. Leveraged time-management, collaboration, and human-centered design skills to contribute to a product that brings students together through shared meals. Notable projects include website redesign & assistance in implementation using React, HTML & JavaScript.</p>
+        </div>
+         <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/lush.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-lg">Sales Ambassador</p>
+                    <p class="subtitle-italic text-sm mt-0.5">LUSH Fresh Handmade Cosmetics</p>
+                    <p class="subtitle text-sm">February 2024 - Present</p>
+                </div>
+            </div>
+            <p class="body text-[14px] mt-2">Facilitated a luxury customer experience through consultation-based service and product demonstrations in a fast-paced team environment, maintained organization and cleanliness of the shop, adhered to visual merchandising standards hosted private in-shop parties, and attended to opening/closing keyholder duties. Educated customers on ethical values and how to support in-store campaign initiatives aimed at human rights, sustainable production, freedom of movement, and digital ethics.</p>
+        </div>
+         <p class="title text-2xl mt-12">Volunteer</p>
+         <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/uw-bio.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-lg">Biology Greenhouse Volunteer</p>
+                    <p class="subtitle-italic text-sm mt-0.5">University of Washington Department of Biology</p>
+                    <p class="subtitle text-sm">September 2025 - Present</p>
+                </div>
+            </div>
+            <p class="body text-[14px] mt-2">The UW Biology Greenhouse is a living laboratory and teaching space that houses hundreds of plant species used for research, teaching, and outreach in plant biology and community ecology. During my time here, I assisted in the care and maintenance of a diverse collection of plant species, including rare and endangered specimens, gained hands-on experience in horticulture, plant biology, and conservation practices.</p>
+        </div>
+         <div>
+            <div class="flex flex-row mt-5">
+                <img src="art/first.svg" class="w-16 h-16 mt-1 aspect-square"/>
+                <div class="flex flex-col ml-4">
+                    <p class="title text-lg">Lead Team Queuer</p>
+                    <p class="subtitle-italic text-sm mt-0.5">FIRST Robotics</p>
+                    <p class="subtitle text-sm">November 2021 - April 2024</p>
+                </div>
+            </div>
+            <p class="body text-[14px] mt-2">Contributed 400+ volunteer hours to FIRST Robotics Competition and FIRST Tech Challenge programs. Ensured smooth participant flow, collaborated with field supervisors, presented queuing path training for large-scale event participants (~2,000+ attendees) Trained, supervised and supported queuing team (5-10 people) in their duties of adhering to the event schedule and managing walking paths. Maintained clear line of communication between event staff, key volunteers, venue management and other queuing staff, and resolved conflicts for a safe, enjoyable and smooth event experience for all guests.</p>
+        </div>
+    </section>
+    <section id="education" class="mt-24">
+        <p class="title text-2xl">Education</p>
+
+    </section>
+    <section id="certifications" class="mt-24">
+        <p class="title text-2xl">Certifications</p>
+    </section>
+    <section id="testimonials" class="mt-24">
+        <p class="title text-2xl">Certifications</p>
+    </section>
+    <section id="contact" class="mt-24">
+        <p class="title text-2xl">Contact</p>
+    </section>
+    <section id="resume" class="mt-24">
+        <p class="title text-2xl">Resume</p>
+    </section>
+  </main>
+  </div>
 </body>
+
+<script>
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll("#sidebar a");
+    const indicator = document.getElementById("indicator");
+    function updateIndicator() {
+        let currentSection = null;
+        sections.forEach(section => {
+            const top = section.offsetTop - 200;
+            if (window.scrollY >= top) {
+                currentSection = section.id;
+            }
+        });
+        navLinks.forEach((link, index) => {
+            if (link.dataset.section === currentSection) {
+                const offset = link.offsetTop + link.offsetHeight / 2 - 12;
+                indicator.style.top = `${offset}px`;
+                link.classList.add("text-black", "font-medium");
+            } else {
+                link.classList.remove("text-black", "font-medium");
+            }
+        });
+    }
+    window.addEventListener("scroll", updateIndicator);
+    window.addEventListener("load", updateIndicator);
+</script>
+
 </html>
