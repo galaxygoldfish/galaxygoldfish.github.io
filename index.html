@@ -67,13 +67,25 @@
     <section id="portfolio" class="flex flex-col mt-20">
         <p class="title text-2xl">Projects</p>
         <div class="relative mt-5">
-            <div class="flex flex-row gap-x-3 overflow-x-auto scrollbar-hide pr-10">
-            <img src="art/groovechart-card.svg" class="shadow-image aspect-auto h-80" />
-            <img src="art/ubiquifi-card.svg" class="shadow-image aspect-auto h-80" />
-            <img src="art/pineapple-card.svg" class="shadow-image aspect-auto h-80" />
-            <img src="art/waveslider-card.svg" class="shadow-image aspect-auto h-80 mr-10" />
+            <div id="project-scroll" class="flex flex-row gap-x-3 overflow-x-scroll scrollbar-hide pr-10">
+                <div onclick="window.location.href='https://sebastianhriscu.com/projects/groovechart.html'" class="cursor-pointer inline-block shrink-0">
+                    <img src="art/groovechart-card.svg" class="shadow-image aspect-auto h-80" />
+                </div>
+                 <div onclick="window.location.href='https://sebastianhriscu.com/projects/ubiquifi.html'" class="cursor-pointer inline-block shrink-0">
+                    <img src="art/ubiquifi-card.svg" class="shadow-image aspect-auto h-80" />
+                </div>
+                 <div onclick="window.location.href='https://sebastianhriscu.com/projects/pineapple.html'" class="cursor-pointer inline-block shrink-0">
+                    <img src="art/pineapple-card.svg" class="shadow-image aspect-auto h-80" />
+                </div>
+                 <div onclick="window.location.href='https://sebastianhriscu.com/projects/waveslider.html'" class="cursor-pointer inline-block shrink-0">
+                    <img src="art/waveslider-card.svg" class="shadow-image aspect-auto h-80" />
+                </div>    
+                <div onclick="window.location.href='https://sebastianhriscu.com/projects/scouting.html'" class="cursor-pointer inline-block shrink-0">
+                    <img src="art/scouting-card.svg" class="shadow-image aspect-auto h-80 mr-10" />
+                </div>               
             </div>
-            <div class="pointer-events-none absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent"></div>
+            <div id="fade-right" class="pointer-events-none absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent"></div>
+            <div id="fade-left" class="pointer-events-none absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white to-transparent transition-opacity duration-300 opacity-0"></div>
         </div>
     </section>
     <section id="skills" class="flex flex-col mt-24">
@@ -375,6 +387,18 @@
     }
     window.addEventListener("scroll", updateIndicator);
     window.addEventListener("load", updateIndicator);
+    const scrollContainer = document.getElementById("project-scroll");
+    const fadeLeft = document.getElementById("fade-left");
+    const fadeRight = document.getElementById("fade-right");
+    function updateFades() {
+    const scrollLeft = scrollContainer.scrollLeft;
+    const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    fadeLeft.style.opacity = scrollLeft > 0 ? "1" : "0";
+    fadeRight.style.opacity = scrollLeft < maxScrollLeft - 1 ? "1" : "0";
+    }
+    scrollContainer.addEventListener("scroll", updateFades);
+    window.addEventListener("resize", updateFades);
+    window.addEventListener("load", updateFades);
 </script>
 
 </html>
