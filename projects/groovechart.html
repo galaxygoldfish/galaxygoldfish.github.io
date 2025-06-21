@@ -2,144 +2,50 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <script src="../script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css" rel="stylesheet">
+    <title>Groovechart</title>  
+    <link rel="icon" href="../art/groovechart/groovechart-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-center min-h-screen flex flex-col">
-   <nav id="navbar" class="flex flex-col  md:flex-row w-full h-auto justify-between fixed pt-10 transition-all duration-500 ease-in-out">
-        <div class="flex flex-col md:flex-row w-full md:justify-between md:w-full transition-all duration-400">
-            <div class="flex flex-row w-full md:w-auto justify-between md:order-last">
-                <button id="menu-toggle" class="ml-10 md:hidden">
-                    <img src="../icon/bar-overflow.svg" class="pt-1 size-[24px]">
-                </button>            
-                <script>
-                    // Expanding menu (on small device sizes) on button click
-                    document.getElementById("menu-toggle").addEventListener("click", function() {
-                        const menu = document.getElementById("menu");
-                        if (menu.classList.contains("max-h-0")) {
-                            menu.classList.remove("max-h-0", "opacity-0", "invisible");
-                            menu.classList.add("max-h-[500px]", "opacity-100", "visible");
-                            navbar.classList.add("backdrop-blur-lg", "bg-white/30", "shadow-sm", "pb-7", "pt-7");
-                        } else {
-                            menu.classList.remove("max-h-[500px]", "opacity-100", "visible");
-                            menu.classList.add("max-h-0", "opacity-0", "invisible");
-                        }
-                    });
-                </script>
-                <div class="bg-black group hover:bg-[#00000000] border-black border-2 rounded-md mr-10 md:mr-15 transition-all duration-200 hover:scale-[1.02]">
-                    <a href="#" class="inter-menu m-6 text-white group-hover:invert">CONTACT</a>
+<body class="w-full h-full flex flex-col items-center mb-40">
+  <a href="../index.html" class="absolute top-10 left-10">
+    <img src="../icon/close.svg" />
+  </a>
+    <div class="flex flex-row w-full mt-24 mr-[198px] justify-center">
+        <img src="../art/groovechart/groovechart-icon.svg" class="h-[90px] aspect-auto mr-6" />
+        <div class="w-2/3">
+        <div class="w-full flex flex-row items-center justify-start">
+                <div>
+                    <p class="queering text-[160px] leading-[90px]">GROOVECHART</p>
+                    <p class="body mt-7">Android + iOS Application</p>
+                    <p class="body">February 2024 - Present</p>
                 </div>
             </div>
-            <ul class="hidden order-first md:flex flex-row justify-start gap-x-6 md:gap-x-10 px-[4rem]">
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html" class="inter-menu">HOME</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html#about" class="inter-menu">ABOUT</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html#experience" class="inter-menu">EXPERIENCE</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../portofolio.html" class="inter-menu">PORTFOLIO</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="../index.html#writing" class="inter-menu">WRITING</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200"><a href="#" class="inter-menu">RESUME</a></li>
-            </ul>
-            <ul id="menu" class="max-h-0 opacity-0 invisible flex-col justify-center ml-10 transition-all duration-400 ease-in-out">
-                <li class="hover:scale-[1.03] transition-all duration-200 mb-0 mt-10"><a href="../index.html" class="inter-menu">HOME</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../index.html#about" class="inter-menu">ABOUT</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../index.html#experience" class="inter-menu">EXPERIENCE</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../portofolio.html" class="inter-menu">PORTFOLIO</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="../index.html#writing" class="inter-menu">WRITING</a></li>
-                <li class="hover:scale-[1.03] transition-all duration-200 mt-7"><a href="#" class="inter-menu">RESUME</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="w-full md:max-w-6xl mx-auto flex flex-col min-h-screen justify-end py-10">
-        <div class="flex flex-col md:flex-row items-end justify-between w-full mx-auto pb-10">
-            <div class="w-full flex flex-col items-center md:items-start text-center md:text-left order-last md:order-first">
-                <img src="../art/groovechart-logo.svg" class="mb-5">
-                <h1 class="queering-groovechart-display leading-none text-6xl md:text-9xl mb-7 md:mb-12">GROOVECHART</h1>
-                <div class="w-full flex flex-col md:flex-row md:justify-between">
-                    <p class="inter-body pt-3">February 2024 - Present<br>Android/iOS Application</p>
-                </div>
-            </div>
-            <div class="w-auto flex flex-row md:flex-col gap-4">
-                <a href="https://github.com/galaxygoldfish/groovechart" target="_blank" rel="noopener noreferrer" 
-                    class="inline-flex flex-none justify-center items-center bg-black rounded-md transition-all hover:bg-[#00000000] 
-                        hover:border-2 group whitespace-nowrap px-5">
-                    <img src="../icon/github-mark.svg" class="ml-5 w-6 h-6 group-hover:invert">
-                    <span class="text-white m-5 inter-body group-hover:invert">View source on GitHub</span>
-                </a>
-                <a href="some figma link" target="_blank" rel="noopener noreferrer" 
-                   class="flex flex-row items-center bg-black rounded-md transition-all hover:bg-[#00000000] 
-                          hover:border-2 group whitespace-nowrap px-5">
-                    <img src="../icon/figma-mark.svg" class="w-6 h-6 group-hover:invert">
-                    <span class="text-white m-5 inter-body group-hover:invert">View design files on Figma</span>
-                </a> 
-            </div>
-        </div>
-    </div>
-    </div class="w-full flex flex-col px-15 items-center">
-        <div class="max-w-5/6 md:max-w-6xl place-self-center mt-20 md:mt-32">
-            <p class="inter-body text-center md:text-start p-0" style="line-height: 140%;">
-                Groovechart is a companion mobile app for Spotify, allowing users to access stats about their music taste, see what friends are listening to, and expand their taste through generated playlists. I leveraged the Spotify Web API and Buddylist for the backend of this project, and used the Kotlin Multiplatform Mobile (KMM) framework to build the iOS/Android apps.
-            </p>
-            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">GENERATED PLAYLIST WALKTHROUGH</p>
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                Being one of the central features of the product, users are able to get generated playlists using the recommendation endpoint (from Spotify Web API). While Spotify already provides various playlists containing songs that users might like (based off of their listening history), I wanted to allow users to fine tune the exact mood of their discovery playlists and take advantage of all the parameters available in the recommendation endpoint. 
-            </p>
-            <img src="../art/groovechart-generatedwalk.svg" class="w-full rounded-md border-2 mt-10">
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                Above is a storyboard of the process that a user would go through to use the playlist generation / recommendation feature of the app. The app offers a few pre-configured themes to choose from for easy, one tap playlist creation, but in the above process, the user selects the "Completely custom" option which allows them to have full control over the genres, mood and length. 
-                My main focus in determining how to structure the customization interface was to communicate the intended course of action to users through layout, using typography hierarchy, large actionable blocks, dashed vs filled outlines and light animation upon interaction. I've also implemented my <a style="text-decoration: underline;" href="waveslider.html">WaveSlider</a> library in the "Adjust the mood" page to give a smooth animation to the sliders upon drag.
-            </p>
-            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">BUILDING A PRODUCT IDENTITY</p>
-            <img src="../art/groovehcart-designsystem.svg" class="w-full rounded-md border-2 mt-7">
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                In the final iteration of the app, I wanted to create a design system that was consistent and bold, but not too overcrowded to maintain clarity and ease of use. In the design system, I used a monochromatic color palette, light shape outlining and moderate corner sizing to embrace a content-centric interface where artist images and cover art take the main stage in full color. For display typography, I elected to use the bold and expressive Queering font which complements the dense yet clear main interface, and Inter elsewhere as a clean sans-serif that is easy to read and doesn’t take the attention away from the main content.
-            </p>
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                This was also a really good exercise in using design tokens - in this project I draw heavily on the Material 3 system but use custom branding (and opting out of dynamic color) and typography. Using these tokens gave me some good practice in asset & style libraries in Figma, which translate really nicely to a faster implementation for both native apps. Since KMM allows for a central "logic" module while the UI is still implemented natively, I was able to plug-and-play the styles and components that I created in Figma in the SwiftUI and Jetpack Compose counterparts. This gave a lot more structure to the steps I took to implement the project, and allowed more time to focus on bug fixes/central API logic/performance optimization.
-            </p> 
-            <img src="../art/groovechart-components.svg" class="w-full rounded-md border-2 mt-10">
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                Shown above are some of the UI components that I created in my Figma project library, all of which apply the design tokens created as part of my custom Groovechart design system (text styles, color, shape, icon components, etc.)
-            </p>
-            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">ITERATIVE DESIGN PROCESS</p>
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                Over the course of this project's design phase, I went through three main design iterations, starting with one based off of <a>Material 3 theming</a>, then proceeding to create a custom design system, and in the final iteration, a refined version of my custom system that focuses on visual communication, consistency, and simplicity. A few main highlights include:
-                <ul class="list-disc ml-5 mt-5">
-                    <li class="inter-body mt-3">Keeping the idea of a bold design as the main focus</li>
-                    <li class="inter-body mt-3">Reducing visual clutter to highlight the intended course of action</li>
-                    <li class="inter-body mt-3">Moving to a primarily monochromatic UI, with focused content in full color</li>
-                    <li class="inter-body mt-3">Creating a dense while still readable interface</li>
-                </ul>
-            </p>
-            <img src="../art/groovechart-iterative.svg" class="w-full rounded-md border-2 mt-10">
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                I learned a lot more about design tooling as well throughout the design iteration process, as this was one of the first projects that I've done following a meticulous design process. Before, in Figma I would create my layouts by just copy and paste of elements using shapes and text, but without any constraints however in this project, going from the second to third iteration, I learned and used the layout/auto layout features, constraints, components and design tokens to make the process scalable, consistent and easy to transition to the development phase.
-            </p>
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                Shown below is the progression of the design of the home tab: In terms of color, in the first iteration I decided that the highly rounded and accent-colored design took away from the content (track and artist art), so I moved in the next iteration to one that emphasized top songs & artists leaving everything else grayscale. For typography, I knew I wanted a bold look to the app, but the Poppins typeface (Iteration 1) was a little bit too bold, so I moved to the still-bold-but-compact Queering font in iterations 2 & 3, really reflecting that compactness in the final iteration with content becoming more dense, and a clear hierarchy established.
-            </p>
-            <img src="../art/groovechart-iterative-2.svg" class="w-full rounded-md border-2 mt-10">
-            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">DEVELOPMENT & FRAMEWORK</p>
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                I opted to implement the Model-View-ViewModel (MVVM) architecture for the entire project, where:
-            </p>
-                <ul class="list-disc ml-5 mt-5">
-                    <li class="inter-body mt-3">Views, ViewModels & navigation system are written natively and separate</li>
-                    <li class="inter-body mt-3">The "model" and networking/contacting API is in the shared module</li>
-                </ul>
-            <p class="inter-body mt-4 text-center md:text-start" style="line-height: 140%;">
-                This was a good choice for keeping the UI and backend logic separated so that it's easier to maintain, but also was helpful during my journey of learning the iOS framework and Swift language since I had previous experiences with the Android native framework, but this was the first time that I was writing an iOS native application.
-            </p>
-            <img src="../art/groovechart-arch.svg" class="w-full rounded-md border-2 mt-10">
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                In the development process of this app, I also chose to focus on accessibility and having stronger error handling.
-            </p>
-            <p class="queering-groovechart-header text-5xl text-center md:text-start mt-16">PROJECT TAKEAWAYS</p>
-            <p class="inter-body mt-10 text-center md:text-start" style="line-height: 140%;">
-                work in progress !
-            </p>
-        </div>
-    </div>
+            <div class="w-full mt-16">
+                <img src="../art/groovechart/groovechart-screens.svg" class="w-full" />
+                <p class="title text-2xl mt-30">Motivation & Goals</p>
+                <p class="body mt-5">Groovechart is a mobile application designed to be a companion to Spotify, allowing users to view stats about their listening activity year-round, see what their friends are listening to (since the official app currently lacks this feature on mobile), and create fine-tuned generated playlists to explore their music taste. My primary motivation to build this project was to further develop my skills in mobile development and design, with a focus on error handling, unit testing and modularization. The app is implemented natively for iOS and Android, includes a module of shared code using the Kotlin Multiplatform Mobile framework, and uses the Spotify API to access data about users’ listening activity.</p>
+                <p class="title text-2xl mt-24">Building a product identity</p>
+                <img src="../art/groovechart/groovechart-system.svg" class="w-full mt-7" />
+                <p class="body mt-7">The design goal for this project was to create a bold and modern product whose usage was communicated primarily through visuals and layout. To accomplish this, I elected to use an expressive primary font with an easy-to-read sans-serif for body text, minimal theme colors to allow content to be highlighted, and comfortable spacing between elements to enhance clarity and usability.</p>
+                <p class="body mt-4">During the design phase, I followed a design token first approach, beginning with the core foundations of the brand, including typography, color, shape, and iconography. By establishing these elements early on, I was able to build consistent, reusable components and then incorporate them into wireframes with greater efficiency. This workflow not only accelerated the process of creating mockups but also gave me hands-on experience with creating component variants and applying library styles in Figma, reinforcing my understanding of scalable design systems.</p>
+                <img src="../art/groovechart/groovechart-components.svg" class="w-full mt-7" />
+                <p class="title text-2xl mt-24">Development & multiplatform architecture</p>
+                <p class="body mt-5">My approach to implementing this application was to use the Kotlin Multiplatform Mobile (KMM) framework, which enabled me to build both iOS and Android versions natively while sharing business logic through a common Kotlin module. I structured the shared code to handle networking and other core logic, while keeping UI-related code within the platform specific modules. In each variant, I also adopted the Model-View-ViewModel (MVVM) architecture to promote abstraction and maintainability. This framework was especially valuable for my learning process because I was able to gain hands-on experience with an industry standard toolset, and deepen my understanding of native iOS development. Since this was one of my first native iOS apps, leveraging a shared codebase helped reduce duplication and streamline the development process.</p>
+                <p class="title text-2xl mt-24">Generated playlist feature</p>
+                <img src="../art/groovechart/groovechart-generated.svg" class="w-full mt-7" />
+                <p class="body mt-7">The generated playlist feature is a core part of the app, enabling users to create playlists on demand whether made up of past favorites, new music they’re likely to enjoy, or a blend of both. While the app offers themed playlist suggestions, users can also take the “custom” route, which is great for those who know the vibe they are looking for but not the specific tracks. This path leverages the Spotify API recommendation endpoint, which supports a range of tunable parameters such as “danceability”, “energy”, and “popularity”. These can be adjusted using intuitive sliders, giving users control without overwhelming complexity. Once the playlist is finalized, users are seamlessly redirected to the Spotify app, where their personalized playlist is already saved and ready to play.</p>
+                <p class="title text-2xl mt-24">Iterative design process</p>
+                <img src="../art/groovechart/groovechart-iterative-welcome.svg" class="w-full mt-7" />
+                <p class="body mt-7">To design this product, I followed an iterative approach that evolved through experimentation and user-centric considerations. The initial version leaned heavily on Material Design 3 guidelines, providing a familiar UI to start with. However, as the project progressed, I decided to establish a distinct visual identity, leading to the development of a custom design system which was tailored to better reflect the app's tone, personality and use case. This iterative process not only helped define the visual language of the app but also improved usability, reduced visual noise, and created a more memorable user experience.</p>
+                <p class="body mt-5">Some key innovations to note across the design evolution is a shift to primarily monochromatic UI elements to be more content-focused, higher density of visual elements to allow for more information delivery, and ensuring sufficient contrast between elements for visual accessibility considerations.</p>
+                <img src="../art/groovechart/groovechart-iterative-home.svg" class="w-full mt-7" />
+                <p class="title text-2xl mt-24">Takeaways</p>
+                <p class="body mt-5">This project was a valuable experience in mobile app development, allowing me to practice clean architecture, implement networking and authentication flows, and gain hands on experience with industry standard toolkits. One of the biggest challenges I encountered was designing the structure of the network service, more specifically, determining how to organize shared logic versus platform specific functionality. Deciding which pieces of code belonged in the shared module and which should remain within the native layers required careful consideration of maintainability, scalability, and platform constraints. </p>
+            </div> 
+        </div> 
+  </div>
 </body>
