@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <title>Pineapple</title>  
+    <link rel="icon" href="../art/pineapple/pineapple-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body class="w-full h-full flex flex-col items-center mb-40">
+  <a href="../index.html" class="absolute top-10 left-10">
+    <img src="../icon/close.svg" />
+  </a>
+    <div class="flex flex-row w-screen mt-24 mr-[198px] justify-center align-top">
+        <img src="../art/pineapple/pineapple-icon.svg" class="w-[90px] aspect-auto mr-6 ml-10 place-self-start justify-self-start" />
+        <div class="w-2/3">
+        <div class="w-full flex flex-row items-center justify-start">
+                <div class="w-full">
+                  <div class="flex flex-row justify-between items-baseline w-full">
+                    <p class="text-[120px] leading-[90px] mt-3" style="font-family: 'Rubik'; font-weight: 400; letter-spacing: -7px;">Pineapple</p>
+                    <div class="flex flex-row gap-4">
+                      <a class="flex items-center gap-2 border-[1.5px] hover:bg-black group hover:cursor-pointer transition-all duration-150 border-black px-4 py-2 rounded-md" href="">
+                        <img src="../icon/figma-icon.svg" alt="Figma" class="h-5 w-5 group-hover:invert" />
+                        <span class="body ml-1 group-hover:invert">Figma</span>
+                      </a>
+                      <a class="flex items-center gap-2 border-[1.5px] hover:bg-black group hover:cursor-pointer transition-all duration-150 border-black px-4 py-2 rounded-md" href="">
+                        <img src="../icon/github-icon.svg" alt="GitHub" class="h-5 w-5 group-hover:invert" />
+                        <span class="body ml-1 group-hover:invert">GitHub</span>
+                      </a>
+                    </div>
+                  </div>
+                    <p class="body mt-4 ml-2">Native Android Application</p>
+                    <p class="body ml-2">February 2024 - Present*</p>
+                </div>
+            </div>
+            <div class="w-full mt-16">
+                <img src="../art/pineapple/pineapple-screens.png" class="w-full" />
+                <p class="title text-2xl mt-30">Overview</p>
+                <p class="body mt-5">Pineapple is a natively built Android Reddit client application that follows Material Design 3 styling. The goal of this project was to practice adhering to an industry standard design system, practice API/network call design and continue to familiarize myself with mobile application development practices. Over the time that the project has existed, it has gained traction on GitHub with over 150+ stars and users actively contributing to the project through their own repository forks. </p>
+                <p class="title text-2xl mt-24">Dynamic color</p>
+                <p class="body mt-5">One of my goals in creating Pineapple was to offer users an alternative visual experience for a Reddit client, one that embraced modern design trends while staying true to Android’s system aesthetics. While there are many third-party Reddit apps that experiment with unique design directions, I noticed a distinct lack of apps that fully adopted the Material Design 3 (M3) language. As someone who appreciates the harmony and flexibility of M3, I set out to create a Reddit client that followed these design principles and incorporated Android's Dynamic Color system.</p>
+                <img src="../art/pineapple/pineapple-dynamic.svg" class="w-full mt-7" />
+                <p class="body mt-5">Dynamic Color, introduced in Android 12, allows apps to adapt their UI colors based on the user’s home screen wallpaper. This feature generates a cohesive color palette derived from the system theme, enabling apps to match the broader aesthetic of the device. By using Dynamic Color in Pineapple, I aimed to make the app feel more native, personal, and visually consistent with the rest of the Android experience.</p>
+                <p class="title text-2xl mt-24">Adaptable design & free to use</p>
+                <img src="../art/pineapple/pineapple-authflow.svg" class="w-full mt-7" />
+                <p class="body mt-7">During the start of this project, I designed the app and its authentication flow to work under the assumption that API access was not restricted, but this changed about halfway through the project, where the Reddit API became a paid service for high-volume apps. To design around this and avoid users having to pay for the app, I implemented a “provide your own key” structure, where users are guided through creating their own API key for free and entering it during the onboarding flow. This design saves the key locally, allows users to revoke at any time, and keeps the app free to use for all.</p>
+                <p class="title text-2xl mt-24">Architecture</p>
+                <p class="title text-2xl mt-24">Takeaways</p>
+            </div> 
+        </div> 
+  </div>
+</body>
