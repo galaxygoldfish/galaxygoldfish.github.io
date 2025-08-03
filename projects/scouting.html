@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <title>Scouting App</title>  
+    <link rel="icon" href="../art/scouting/scouting-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body class="w-full h-full flex flex-col items-center mb-40">
+  <a href="../index.html" class="absolute top-10 left-10">
+    <img src="../icon/close.svg" />
+  </a>
+    <div class="flex flex-row w-full mt-24 mr-[198px] justify-center">
+        <img src="../art/scouting/scouting-icon.svg" class="h-[130px] aspect-auto mr-6" />
+        <div class="w-2/3">
+        <div class="w-full flex flex-row items-center justify-start">
+                <div class="w-full mt-6">
+                  <div class="flex flex-row justify-between items-baseline w-full">
+                    <p class="text-[115px] leading-[90px] inter" style="font-weight: 600; letter-spacing: -5px;">Scouting App</p>
+                    <a class="flex items-center gap-2 border-[1.5px] hover:bg-black group hover:cursor-pointer transition-all duration-150 border-black px-4 py-2 rounded-md" href="https://github.com/robototes/ScoutingApp">
+                        <img src="../icon/github-icon.svg" alt="GitHub" class="h-5 w-5 group-hover:invert" />
+                        <span class="body ml-1 group-hover:invert">GitHub</span>
+                    </a>
+                  </div>
+                  <div class="ml-2">
+                    <p class="body mt-7">Android (tablet) application</p>
+                    <p class="body">February 2022 - April 2023</p>
+                  </div>
+                </div>
+            </div>
+            <div class="w-full mt-16">
+                <img src="../art/scouting/scouting-screens.svg" class="w-full" />
+                <p class="title text-2xl mt-30">Background & purpose</p>
+                <p class="body mt-5">Scouting at FRC (FIRST Robotics Competition) events is an essential part of a team’s success, informing them about the performance of other teams, the specifics of everyone’s competition robot, and giving a higher chance of winning the event by making it to the final rounds. The main structure of these competitions is as follows: all teams participate in qualification matches, where each match consists of 3 teams (one randomly selected “alliance”) vs 3 teams. If one alliance wins, all teams in it go up in rank, and vice versa. After qualification rounds, the final matches are played in fixed alliances that do not change for the rest of the event, and are selected by the highest ranked teams. This is where scouting becomes crucial because, if your team has the opportunity to select alliance partners, then you’ll want the data on how each team has performed during other matches to gauge how good of a fit they will be and how they can contribute to the alliance’s success.</p>
+                <p class="title text-2xl mt-24">Benefits of digital scouting</p>
+                <p class="body mt-7">Teams will often use a variety of strategies at competitions to keep track of this scouting data, which is collected from team members observing the matches in the audience. In our team, the method used involved team members writing notes about each match on a dry-erase board, which would then be frantically entered into an Excel spreadsheet in between each match and then late compiled and analyzed. This app serves as a revamp to that system, allowing all scouting to be digital, collected on tablets and automatically saved in spreadsheet format. This dramatically reduced stress in between matches, allowed us to better quantify other team’s performance with more numerical data, and allows for future-proofing with a template design system.</p>
+                <p class="title text-2xl mt-24">Ease of use & templates</p>
+                <img src="../art/scouting/scouting-template.svg" class="w-full mt-7" />
+                <p class="body mt-5">In FRC, the game that teams will compete in changes each year under a different theme, bringing changes in how teams can score points and move around the field. This requires that the types of data collected when scouting must change each year as well, to be able to fully account for a team’s performance. I designed this application to use a template system, which allows dragging and dropping different premade, editable components into a form, which can be exported and reused on any device. This allows for future-proofing, because creating templates each year can use this same system, and users who create these templates do not need to have any app development or technical knowledge to use it. </p>
+                <p class="title text-2xl mt-24">Data organization</p>
+                <p class="body mt-7">Teams will often use a variety of strategies at competitions to keep track of this scouting data, which is collected from team members observing the matches in the audience. In our team, the method used involved team members writing notes about each match on a dry-erase board, which would then be frantically entered into an Excel spreadsheet in between each match and then late compiled and analyzed. This app serves as a revamp to that system, allowing all scouting to be digital, collected on tablets and automatically saved in spreadsheet format. This dramatically reduced stress in between matches, allowed us to better quantify other team’s performance with more numerical data, and allows for future-proofing with a template design system.</p>
+                <p class="title text-2xl mt-24">Scouting system</p>
+                <img src="../art/scouting/scouting-system.svg" class="w-full mt-7" />
+                <p class="body mt-7">The full system requires only 6 additional “scouts” or people to collect data in the stands at competition, where each person monitors one team on each alliance (red/blue). The data that is saved is tagged with the user’s name, so that if there are any outliers or additional questions, the scouting lead can easily follow up to manually correct any issues. Many teams also set requirements for how much each person should contribute to scouting, so providing names allows scouting leads to manage who is scouting at any given time and check to see who has met these requirements.</p>
+                <p class="title text-2xl mt-24">Other scouting features</p>
+                <img src="../art/scouting/scouting-phases.svg" class="w-full mt-7" />
+                <p class="body mt-7">During matches, there are three phases (autonomous, teleoperated, endgame) which each come with different robot movement requirements and ways to earn points. In this scouting app, users can create different scouting forms for each phase of the game, which allows for more precise analysis of team performance and identification of strengths/weaknesses of each robot. Furthermore, there is another mode included which prompts users to visit each team’s pit to perform pit scouting, where a mini-interview is conducted with someone from that team to learn more about the specific hardware, software and strategy of the robot. This also supports preset scheduling and creation of templates.</p>
+                <p class="title text-2xl mt-24">Takeaways</p>
+                <p class="body mt-5">Designing and implementing this product was a good experience in expanding my mobile development skills to include a new form factor (tablet), working with file I/O and multi-device system design, and also designing for future use with the template system. This was also a great experience in user research, which I performed while we made the switch from a paper scouting system to a digital one to learn about pain points and opportunities when implementing this app. </p>
+            </div> 
+        </div> 
+  </div>
+</body>
